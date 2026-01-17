@@ -1,60 +1,88 @@
+import { Phone, Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="gradient-hero py-12">
+    <footer className="bg-card border-t border-border py-12">
       <div className="section-container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Company */}
-          <div>
-            <img src={logo} alt="Кавказ Инжиниринг" className="h-12 w-auto mb-4 brightness-0 invert" />
-            <p className="text-primary-foreground/80 text-sm">
+          <div className="lg:col-span-1">
+            <img src={logo} alt="Кавказ Инжиниринг" className="h-10 w-auto mb-4 brightness-0 invert" />
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Орган по сертификации пассажирских подвесных канатных дорог
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation */}
           <div>
-            <h4 className="font-heading font-semibold text-primary-foreground mb-4">
+            <h4 className="font-heading font-semibold text-foreground mb-4">
               Навигация
             </h4>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
+                <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
                   О компании
                 </a>
               </li>
               <li>
-                <a href="#applicants" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
-                  Информация для заявителей
+                <a href="#expertise" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+                  Экспертиза
                 </a>
               </li>
               <li>
-                <a href="#accreditation" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
-                  Аккредитация
+                <a href="#certification" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+                  Сертификация
                 </a>
               </li>
               <li>
-                <a href="#contacts" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
+                <a href="#contacts" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
                   Контакты
                 </a>
               </li>
             </ul>
           </div>
 
+          {/* Contacts */}
+          <div>
+            <h4 className="font-heading font-semibold text-foreground mb-4">
+              Контакты
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="tel:+79187846121" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm">
+                  <Phone className="w-4 h-4 text-accent" />
+                  +7 (918) 784-61-21
+                </a>
+              </li>
+              <li>
+                <a href="mailto:osp@kavkaz-ing.ru" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm">
+                  <Mail className="w-4 h-4 text-accent" />
+                  osp@kavkaz-ing.ru
+                </a>
+              </li>
+              <li>
+                <div className="flex items-start gap-2 text-muted-foreground text-sm">
+                  <MapPin className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                  <span>г. Пятигорск, ул. Ермолова д. 12, стр. 3</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
           {/* Legal */}
           <div>
-            <h4 className="font-heading font-semibold text-primary-foreground mb-4">
+            <h4 className="font-heading font-semibold text-foreground mb-4">
               Документы
             </h4>
             <ul className="space-y-2">
               <li>
-                <a href="/privacy" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
+                <a href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
                   Политика конфиденциальности
                 </a>
               </li>
               <li>
-                <a href="/terms" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
+                <a href="/terms" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
                   Пользовательское соглашение
                 </a>
               </li>
@@ -62,8 +90,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
-          <p className="text-primary-foreground/60 text-sm">
+        <div className="border-t border-border mt-10 pt-8 text-center">
+          <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} ООО «Кавказ Инжиниринг». Все права защищены.
           </p>
         </div>
