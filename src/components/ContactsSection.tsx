@@ -167,7 +167,7 @@ const ContactsSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">Фактический адрес:</p>
-                  <p className="text-foreground">Трямляндия 1</p>
+                  <p className="text-foreground">Кешева Диана Амербиевна пока что не предоставила адрес подразделения в Москве</p>
                 </div>
               </div>
             </div>
