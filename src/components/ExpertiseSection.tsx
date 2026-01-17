@@ -33,11 +33,11 @@ const ExpertiseSection = () => {
     <section id="expertise" className="py-20 md:py-28 bg-background">
       <div className="section-container">
         {/* Section header */}
-        <div className="mb-14">
+        <div className="text-center mb-14">
           <h2 className="section-title mb-4 animate-fade-in">
             Подтверждённая экспертиза
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Часть крупного инженерного центра с доказанным опытом в реализации сложных проектов
           </p>
         </div>
