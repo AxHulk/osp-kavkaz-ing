@@ -93,15 +93,15 @@ const About = () => {
             {officialData.map((item, index) => (
               <div 
                 key={index}
-                className="flex flex-col md:flex-row md:items-start gap-4 p-6 bg-card/50 rounded-xl border border-border hover:border-accent/30 transition-colors"
+                className="flex flex-col md:flex-row md:items-center gap-4 p-6 bg-card/50 rounded-xl border border-border hover:border-accent/30 transition-colors"
               >
                 <div className="flex items-center gap-4 md:w-1/3">
-                  <div className="p-3 bg-accent/10 rounded-lg">
+                  <div className="p-3 bg-accent/10 rounded-lg shrink-0">
                     <item.icon className="w-6 h-6 text-accent" />
                   </div>
                   <span className="text-foreground/60 font-medium">{item.label}</span>
                 </div>
-                <div className="md:w-2/3">
+                <div className="md:w-2/3 flex flex-col justify-center">
                   <p className="text-foreground font-medium">{item.value}</p>
                   {item.link && (
                     <a 
