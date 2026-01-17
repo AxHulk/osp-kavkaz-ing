@@ -1,4 +1,5 @@
 import { Cable, Truck, Settings, FlaskConical, ArrowUpRight, Activity } from "lucide-react";
+import { Link } from "react-router-dom";
 import geomonitoringEquipment from "@/assets/geomonitoring-equipment.jpg";
 import elbrusCableCar from "@/assets/elbrus-cable-car.webp";
 
@@ -50,9 +51,10 @@ const CertificationSection = () => {
         {/* Directions grid 2x2 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
           {directions.map((direction, index) => (
-            <div
+            <Link
+              to="/accreditation"
               key={direction.title}
-              className="group relative h-64 md:h-72 rounded-xl overflow-hidden cursor-pointer card-hover-effect animate-slide-up"
+              className="group relative h-64 md:h-72 rounded-xl overflow-hidden cursor-pointer card-hover-effect animate-slide-up block"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Background image */}
@@ -83,7 +85,7 @@ const CertificationSection = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
