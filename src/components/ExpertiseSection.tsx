@@ -1,25 +1,29 @@
 import { ArrowUpRight } from "lucide-react";
+import elbrusImage from "@/assets/elbrus-project.jpg";
+import veduchiImage from "@/assets/veduchi-project.jpg";
+import mamisonImage from "@/assets/mamison-project.avif";
+import priyut11Image from "@/assets/priyut11-project.webp";
 
 const projects = [
   {
     name: "Эльбрус",
     description: "Система искусственного снегообразования (СИС) и Альп-городок",
-    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80",
+    image: elbrusImage,
   },
   {
     name: "Ведучи",
     description: "Техническое сопровождение создания Системы искусственного снегообразования",
-    image: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=800&q=80",
+    image: veduchiImage,
   },
   {
     name: "Мамисон",
     description: "Инженерное сопровождение строительства гаража ратраков и СИС",
-    image: "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=80",
+    image: mamisonImage,
   },
   {
     name: "Приют-11",
     description: "Участие в проекте федерального значения по восстановлению легендарной высокогорной гостиницы",
-    image: "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=800&q=80",
+    image: priyut11Image,
     inProgress: true,
   },
 ];
