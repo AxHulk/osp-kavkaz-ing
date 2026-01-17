@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { useState } from "react";
+import { IMaskInput } from "react-imask";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -53,22 +54,50 @@ const ContactsSection = () => {
                 />
               </div>
               <div>
-                <Input
-                  type="email"
-                  placeholder="Email"
+                <IMaskInput
+                  mask="email@domain.tld"
+                  blocks={{
+                    email: {
+                      mask: /^[\w._-]*$/,
+                    },
+                    domain: {
+                      mask: /^[\w.-]*$/,
+                    },
+                    tld: {
+                      mask: /^[a-z]*$/i,
+                    },
+                  }}
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onAccept={(value) => setFormData({ ...formData, email: value })}
+                  placeholder="Email"
                   required
-                  className="bg-background border-border text-foreground placeholder:text-muted-foreground"
+                  className="flex h-10 w-full rounded-md border border-border bg-background px-3 py-2 text-sm text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 />
               </div>
               <div>
-                <Input
-                  type="tel"
-                  placeholder="Телефон"
+                <IMaskInput
+                  mask="+7 (000) 000-00-00"
+                  definitions={{
+                    '0': /[0-9]/
+                  }}
                   value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="bg-background border-border text-foreground placeholder:text-muted-foreground"
+                  onAccept={(value) => setFormData({ ...formData, phone: value })}
+                  onPaste={(e: React.ClipboardEvent) => {
+                    e.preventDefault();
+                    const pastedText = e.clipboardData.getData("text");
+                    const digits = pastedText.replace(/\D/g, "");
+                    let normalized = "";
+                    if (digits.startsWith("8") && digits.length >= 1) {
+                      normalized = "+7" + digits.slice(1);
+                    } else if (digits.startsWith("7")) {
+                      normalized = "+" + digits;
+                    } else if (digits.length > 0) {
+                      normalized = "+7" + digits;
+                    }
+                    setFormData({ ...formData, phone: normalized });
+                  }}
+                  placeholder="Телефон +7 (___) ___-__-__"
+                  className="flex h-10 w-full rounded-md border border-border bg-background px-3 py-2 text-sm text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 />
               </div>
               <div>

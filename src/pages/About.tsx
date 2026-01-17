@@ -1,7 +1,8 @@
 import { Shield, CheckCircle2, Lock, Award, MapPin, FileCheck, ExternalLink, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import elbrusCableCar from "@/assets/elbrus-cable-car.webp";
+import ContactFormDialog from "@/components/ContactFormDialog";
+import aboutHero from "@/assets/about-hero.png";
 
 const About = () => {
   const officialData = [
@@ -50,7 +51,7 @@ const About = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${elbrusCableCar})` }}
+          style={{ backgroundImage: `url(${aboutHero})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         
@@ -73,10 +74,7 @@ const About = () => {
               Наша миссия
             </h2>
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
-              Мы не просто проверяем соответствие стандартам. Мы применяем многолетний инженерный опыт 
-              для глубокого анализа и подтверждения реальной безопасности сложных технических объектов. 
-              Наша миссия — обеспечить абсолютную уверенность в надежности каждого элемента, 
-              от фундамента до вершины.
+              Обеспечение технологического превосходства и безопасности объектов строительства через внедрение точных инженерных решений, безупречное ведение документации и профессиональный контроль на каждом этапе жизненного цикла проекта.
             </p>
           </div>
         </div>
@@ -159,13 +157,12 @@ const About = () => {
             <p className="text-lg text-foreground/70 mb-8">
               Получите подробную консультацию по процедуре сертификации для вашего объекта.
             </p>
-            <a 
-              href="/#contacts"
-              className="btn-primary inline-flex items-center gap-2"
-            >
-              Связаться с нами
-              <ArrowRight className="w-5 h-5" />
-            </a>
+            <ContactFormDialog>
+              <button className="btn-primary inline-flex items-center gap-2">
+                Связаться с нами
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </ContactFormDialog>
           </div>
         </div>
       </section>
