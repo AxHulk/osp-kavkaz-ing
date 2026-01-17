@@ -3,23 +3,24 @@ import { ArrowUpRight } from "lucide-react";
 const projects = [
   {
     name: "Эльбрус",
-    description: "Техническое сопровождение системы искусственного снегообразования и модернизация канатных дорог",
+    description: "Система искусственного снегообразования (СИС) и Альп-городок",
     image: "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "Архыз",
-    description: "Комплексное проектирование и сертификация горнолыжных трасс и канатных дорог",
-    image: "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=80",
-  },
-  {
     name: "Ведучи",
-    description: "Инженерное сопровождение строительства и сертификация инфраструктуры",
+    description: "Техническое сопровождение создания Системы искусственного снегообразования",
     image: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "Домбай",
-    description: "Комплексное проектирование и сертификация канатных дорог курорта",
+    name: "Мамисон",
+    description: "Инженерное сопровождение строительства гаража ратраков и СИС",
+    image: "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Приют-11",
+    description: "Участие в проекте федерального значения по восстановлению легендарной высокогорной гостиницы",
     image: "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=800&q=80",
+    inProgress: true,
   },
 ];
 
@@ -53,6 +54,13 @@ const ExpertiseSection = () => {
               
               {/* Overlay */}
               <div className="card-overlay transition-opacity duration-300 group-hover:opacity-90" />
+              
+              {/* In Progress badge */}
+              {project.inProgress && (
+                <div className="absolute top-4 right-4 bg-primary/90 text-primary-foreground text-xs font-medium px-3 py-1 rounded-full">
+                  В работе
+                </div>
+              )}
               
               {/* Content */}
               <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
