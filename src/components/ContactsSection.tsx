@@ -77,7 +77,7 @@ const ContactsSection = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
-                  rows={4}
+                  rows={8}
                   className="bg-background border-border text-foreground placeholder:text-muted-foreground resize-none"
                 />
               </div>
