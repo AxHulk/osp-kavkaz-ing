@@ -1,10 +1,13 @@
 import { Phone, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,13 +17,45 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Handle hash navigation after page load
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   const navLinks = [
-    { name: "О компании", href: "#about" },
-    { name: "Экспертиза", href: "#expertise" },
-    { name: "Сертификация", href: "#certification" },
-    { name: "Процесс", href: "#process" },
-    { name: "Контакты", href: "#contacts" },
+    { name: "О компании", href: "/about", isPage: true },
+    { name: "Экспертиза", href: "/#expertise", isPage: false },
+    { name: "Сертификация", href: "/#certification", isPage: false },
+    { name: "Процесс", href: "/#process", isPage: false },
+    { name: "Контакты", href: "/#contacts", isPage: false },
   ];
+
+  const handleNavClick = (href: string, isPage: boolean) => {
+    setMobileMenuOpen(false);
+    if (isPage) {
+      navigate(href);
+    } else {
+      // Handle hash links
+      if (location.pathname === '/') {
+        // Already on home page, just scroll
+        const hash = href.replace('/', '');
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // Navigate to home page with hash
+        navigate(href);
+      }
+    }
+  };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -29,24 +64,24 @@ const Header = () => {
       <div className="section-container">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <a href="#" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img 
               src={logo} 
               alt="Кавказ Инжиниринг" 
               className={`h-10 md:h-12 w-auto transition-all duration-300 ${scrolled ? "" : "brightness-0 invert"}`}
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.name}
-                href={link.href}
+                onClick={() => handleNavClick(link.href, link.isPage)}
                 className="text-foreground/80 hover:text-foreground font-medium transition-colors text-sm"
               >
                 {link.name}
-              </a>
+              </button>
             ))}
           </nav>
 
@@ -75,14 +110,13 @@ const Header = () => {
           <nav className="lg:hidden pb-4 border-t border-border pt-4 animate-fade-in bg-background/95 backdrop-blur-sm -mx-4 px-4">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-foreground/80 hover:text-foreground font-medium transition-colors"
+                  onClick={() => handleNavClick(link.href, link.isPage)}
+                  className="text-foreground/80 hover:text-foreground font-medium transition-colors text-left"
                 >
                   {link.name}
-                </a>
+                </button>
               ))}
               <a 
                 href="tel:+79187846121" 
