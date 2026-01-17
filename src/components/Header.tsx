@@ -34,7 +34,7 @@ const Header = () => {
     { name: "Экспертиза", href: "/#expertise", isPage: false },
     { name: "Сертификация", href: "/#certification", isPage: false },
     { name: "Процесс", href: "/#process", isPage: false },
-    { name: "Контакты", href: "/#contacts", isPage: false },
+    { name: "Контакты", href: "/contacts", isPage: true },
   ];
 
   const handleNavClick = (href: string, isPage: boolean) => {
