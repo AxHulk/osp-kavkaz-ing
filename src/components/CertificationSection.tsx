@@ -1,29 +1,35 @@
-import { Cable, Truck, Settings, FlaskConical, ArrowUpRight } from "lucide-react";
+import { Cable, Truck, Settings, FlaskConical, ArrowUpRight, Activity } from "lucide-react";
+import geomonitoringEquipment from "@/assets/geomonitoring-equipment.jpg";
+import elbrusCableCar from "@/assets/elbrus-cable-car.webp";
 
 const directions = [
   {
     icon: Cable,
     title: "Пассажирские канатные дороги",
     description: "Сертификация безопасности и надежности пассажирских канатных дорог всех типов",
-    image: "https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=800&q=80",
+    image: elbrusCableCar,
+    isImport: true,
   },
   {
     icon: Truck,
     title: "Грузовые канатные дороги",
     description: "Сертификация грузовых и смешанных канатных дорог",
     image: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=800&q=80",
+    isImport: false,
   },
   {
     icon: Settings,
     title: "Элементы и компоненты",
     description: "Сертификация отдельных элементов, компонентов и узлов канатных дорог",
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80",
+    image: geomonitoringEquipment,
+    isImport: true,
   },
   {
     icon: FlaskConical,
     title: "Испытания и экспертиза",
     description: "Проведение испытаний, технической экспертизы и анализа безопасности",
     image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80",
+    isImport: false,
   },
 ];
 
@@ -42,7 +48,7 @@ const CertificationSection = () => {
         </div>
 
         {/* Directions grid 2x2 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
           {directions.map((direction, index) => (
             <div
               key={direction.title}
@@ -79,6 +85,45 @@ const CertificationSection = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Geomonitoring block */}
+        <div className="bg-card rounded-2xl p-8 md:p-10 border border-border animate-fade-in">
+          <div className="flex items-start gap-4 mb-6">
+            <div className="w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center flex-shrink-0">
+              <Activity className="w-7 h-7 text-accent" />
+            </div>
+            <div>
+              <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-2">
+                Геотехнический мониторинг
+              </h3>
+              <p className="text-muted-foreground">(геомониторинг)</p>
+            </div>
+          </div>
+          
+          <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
+            Геомониторинг — система слежения за параметрами, характеризующими основания зданий или сооружений 
+            (т.е. геологической среды), которая обеспечивает безопасное и эффективное осуществление 
+            строительно-технологических процессов, ввод и последующую эксплуатацию зданий и сооружений.
+          </p>
+
+          <div className="space-y-4">
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
+              <p className="text-foreground">
+                <span className="font-semibold text-accent">Целью геомониторинга</span> является обеспечение 
+                высокого качества строительства и сохранности зданий и сооружений окружающей застройки.
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
+              <p className="text-foreground">
+                <span className="font-semibold text-accent">Задача геомониторинга</span> — регулярное отслеживание 
+                поведения основания строящегося сооружения и его конструкций, окружающих его зданий, а также 
+                принятие мер по обеспечению безопасного строительства и корректировки конструктивно-технологических решений.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
