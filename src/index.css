@@ -6,104 +6,65 @@
 
 @layer base {
   :root {
-    /* Brand colors inspired by the logo */
-    --background: 210 20% 98%;
-    --foreground: 195 35% 22%;
+    /* Dark graphite theme - "Сертифицированная высота" */
+    --background: 216 28% 12%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 195 35% 22%;
+    --card: 216 25% 16%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 195 35% 22%;
+    --popover: 216 25% 16%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Primary - dark teal from logo */
-    --primary: 195 35% 24%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary - white on dark */
+    --primary: 0 0% 100%;
+    --primary-foreground: 216 28% 12%;
 
-    /* Secondary - lighter teal */
-    --secondary: 195 25% 94%;
-    --secondary-foreground: 195 35% 22%;
+    /* Secondary - slightly lighter dark */
+    --secondary: 216 22% 20%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 195 15% 45%;
+    --muted: 216 20% 25%;
+    --muted-foreground: 0 0% 70%;
 
-    /* Accent - warm highlight */
+    /* Accent - warm gold/orange highlight */
     --accent: 35 90% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent-foreground: 216 28% 12%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 195 20% 88%;
-    --input: 195 20% 88%;
-    --ring: 195 35% 24%;
+    --border: 216 20% 25%;
+    --input: 216 20% 25%;
+    --ring: 0 0% 100%;
 
     --radius: 0.5rem;
 
     /* Custom brand tokens */
-    --brand-dark: 195 35% 22%;
-    --brand-medium: 195 30% 35%;
-    --brand-light: 195 25% 94%;
+    --brand-dark: 216 28% 12%;
+    --brand-graphite: 216 25% 16%;
+    --brand-light-gray: 0 0% 70%;
     --brand-accent: 35 90% 55%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(195 35% 22%) 0%, hsl(195 30% 32%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(35 90% 55%) 0%, hsl(25 85% 50%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(216 28% 12%) 0%, hsl(216 25% 14%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(216 25% 18%) 0%, hsl(216 25% 14%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsl(216 28% 12% / 0.7) 0%, hsl(216 28% 12% / 0.9) 100%);
 
     /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(195 35% 22% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(195 35% 22% / 0.1), 0 2px 4px -2px hsl(195 35% 22% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(195 35% 22% / 0.1), 0 4px 6px -4px hsl(195 35% 22% / 0.1);
-    --shadow-xl: 0 20px 25px -5px hsl(195 35% 22% / 0.1), 0 8px 10px -6px hsl(195 35% 22% / 0.1);
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.2);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -2px hsl(0 0% 0% / 0.2);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -4px hsl(0 0% 0% / 0.2);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.4), 0 8px 10px -6px hsl(0 0% 0% / 0.3);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 195 35% 10%;
-    --foreground: 210 20% 98%;
-
-    --card: 195 30% 14%;
-    --card-foreground: 210 20% 98%;
-
-    --popover: 195 30% 14%;
-    --popover-foreground: 210 20% 98%;
-
-    --primary: 195 25% 94%;
-    --primary-foreground: 195 35% 22%;
-
-    --secondary: 195 30% 20%;
-    --secondary-foreground: 210 20% 98%;
-
-    --muted: 195 30% 18%;
-    --muted-foreground: 195 15% 65%;
-
-    --accent: 35 90% 55%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 195 30% 20%;
-    --input: 195 30% 20%;
-    --ring: 195 25% 94%;
-
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 216 28% 12%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 216 28% 12%;
+    --sidebar-accent: 216 22% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 216 20% 25%;
+    --sidebar-ring: 0 0% 100%;
   }
 }
 
@@ -127,12 +88,12 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  .gradient-hero {
-    background: var(--gradient-hero);
+  .gradient-dark {
+    background: var(--gradient-dark);
   }
 
-  .gradient-accent {
-    background: var(--gradient-accent);
+  .gradient-overlay {
+    background: var(--gradient-overlay);
   }
 
   .shadow-card {
@@ -142,6 +103,26 @@
   .shadow-card-hover {
     box-shadow: var(--shadow-lg);
   }
+
+  .section-title {
+    @apply font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-foreground tracking-wide uppercase;
+  }
+
+  .btn-primary {
+    @apply bg-foreground text-background font-semibold px-6 py-3 rounded-md hover:bg-foreground/90 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-foreground/30 text-foreground font-medium px-6 py-3 rounded-md hover:bg-foreground/10 transition-all duration-300 flex items-center gap-2;
+  }
+
+  .card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-background/95 via-background/70 to-background/40;
+  }
+
+  .card-hover-effect {
+    @apply transition-all duration-500 hover:scale-[1.02] hover:shadow-xl;
+  }
 }
 
 @layer utilities {
@@ -150,7 +131,11 @@
   }
 
   .animate-slide-up {
-    animation: slideUp 0.6s ease-out forwards;
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .animate-slide-left {
+    animation: slideLeft 0.8s ease-out forwards;
   }
 
   @keyframes fadeIn {
@@ -165,11 +150,22 @@
   @keyframes slideUp {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes slideLeft {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 }

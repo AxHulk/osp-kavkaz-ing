@@ -1,40 +1,70 @@
-import { Shield, Award, CheckCircle } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
+  const scrollToContact = () => {
+    document.getElementById("contacts")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToNext = () => {
+    document.getElementById("expertise")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section id="about" className="gradient-hero py-16 md:py-24">
-      <div className="section-container">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6 animate-fade-in">
-            Орган по сертификации пассажирских подвесных канатных дорог
+    <section id="about" className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* Background with gradient overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80')`,
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/70" />
+      </div>
+      
+      <div className="section-container relative z-10 py-20">
+        <div className="max-w-3xl">
+          {/* Main heading */}
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 animate-slide-up leading-tight">
+            Сертификация
+            <br />
+            <span className="text-muted-foreground">на высоте</span>
           </h1>
-          <p className="text-primary-foreground/90 text-lg md:text-xl leading-relaxed mb-8 animate-slide-up">
-            ООО «Кавказ Инжиниринг» — это многопрофильный экспертный центр, предоставляющий комплексные услуги по техническому, геодезическому и инженерному сопровождению объектов капитального строительства.
-          </p>
-          <p className="text-primary-foreground/80 text-base md:text-lg leading-relaxed mb-10 animate-slide-up">
-            Мы специализируемся на комплексном сопровождении сложных инфраструктурных объектов, обеспечивая точность, безопасность и полное соответствие строительных процессов государственным стандартам и проектным решениям.
+          
+          {/* Subtitle */}
+          <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-10 max-w-2xl animate-slide-up" style={{ animationDelay: "0.2s" }}>
+            Профессиональная сертификация канатных дорог и их элементов.
+            <br />
+            Более 20 лет опыта в сложнейших инженерных проектах.
           </p>
 
-          {/* Stats/Highlights */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              <Shield className="w-10 h-10 text-accent mx-auto mb-3" />
-              <h3 className="font-heading font-semibold text-primary-foreground text-lg mb-2">Аккредитация</h3>
-              <p className="text-primary-foreground/80 text-sm">Аккредитованный орган по сертификации</p>
-            </div>
-            <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-              <Award className="w-10 h-10 text-accent mx-auto mb-3" />
-              <h3 className="font-heading font-semibold text-primary-foreground text-lg mb-2">Экспертиза</h3>
-              <p className="text-primary-foreground/80 text-sm">Многолетний опыт в сфере сертификации</p>
-            </div>
-            <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6 animate-slide-up" style={{ animationDelay: "0.3s" }}>
-              <CheckCircle className="w-10 h-10 text-accent mx-auto mb-3" />
-              <h3 className="font-heading font-semibold text-primary-foreground text-lg mb-2">Надёжность</h3>
-              <p className="text-primary-foreground/80 text-sm">Соответствие всем государственным стандартам</p>
-            </div>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 animate-slide-up" style={{ animationDelay: "0.4s" }}>
+            <Button 
+              onClick={scrollToContact}
+              className="btn-primary text-base h-auto"
+            >
+              Получить консультацию
+            </Button>
+            <Button 
+              variant="ghost"
+              className="btn-secondary text-base h-auto"
+              onClick={() => document.getElementById("expertise")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              Портфолио
+              <ArrowRight className="w-4 h-4" />
+            </Button>
           </div>
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <button 
+        onClick={scrollToNext}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-foreground transition-colors animate-bounce"
+      >
+        <ChevronDown className="w-8 h-8" />
+      </button>
     </section>
   );
 };
