@@ -21,22 +21,22 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+                <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
                   О компании
                 </a>
               </li>
               <li>
-                <a href="#expertise" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+                <a href="/#expertise" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
                   Экспертиза
                 </a>
               </li>
               <li>
-                <a href="#certification" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+                <a href="/#certification" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
                   Сертификация
                 </a>
               </li>
               <li>
-                <a href="#contacts" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+                <a href="/contacts" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
                   Контакты
                 </a>
               </li>
