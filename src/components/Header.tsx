@@ -31,9 +31,7 @@ const Header = () => {
 
   const navLinks = [
     { name: "О компании", href: "/about", isPage: true },
-    { name: "Экспертиза", href: "/#expertise", isPage: false },
-    { name: "Сертификация", href: "/#certification", isPage: false },
-    { name: "Процесс", href: "/#process", isPage: false },
+    { name: "Аккредитация", href: "/accreditation", isPage: true },
     { name: "Контакты", href: "/contacts", isPage: true },
   ];
 
