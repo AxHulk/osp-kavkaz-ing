@@ -126,7 +126,7 @@ const ContactsSection = () => {
               </h3>
               <div className="space-y-4">
                 <a
-                  href="tel:+79187846121"
+                  href="tel:+74959844315"
                   className="flex items-center gap-4 text-foreground hover:text-accent transition-colors group"
                 >
                   <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 transition-colors">
@@ -134,7 +134,7 @@ const ContactsSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Телефон</p>
-                    <p className="font-medium">+7 (918) 784-61-21</p>
+                    <p className="font-medium">8 (495) 984-43-15</p>
                   </div>
                 </a>
                 <a
@@ -167,7 +167,7 @@ const ContactsSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">Фактический адрес:</p>
-                  <p className="text-foreground">Кешева Диана Амербиевна пока что не предоставила адрес подразделения в Москве</p>
+                  <p className="text-foreground">123112, г. Москва, ул. Тестовская, д. 10, оф. 509</p>
                 </div>
               </div>
             </div>
