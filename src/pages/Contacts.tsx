@@ -234,13 +234,13 @@ const Contacts = () => {
           </h2>
           <div className="rounded-xl overflow-hidden border border-border h-[400px] md:h-[500px]">
             <iframe
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3Afce0a9b8f2c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5&amp;source=constructor&ll=43.058884%2C44.044219&z=17&pt=43.058884,44.044219,pm2rdm"
+              src="https://yandex.ru/map-widget/v1/?ll=37.5414%2C55.7522&z=17&pt=37.5414,55.7522,pm2rdm"
               width="100%"
               height="100%"
               style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
               allowFullScreen
               loading="lazy"
-              title="Офис Кавказ Инжиниринг на карте"
+              title="Офис Кавказ Инжиниринг на карте - Москва, ул. Тестовская"
             />
           </div>
         </div>
