@@ -50,9 +50,9 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="tel:+79187846121" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm">
+                <a href="tel:+74959844315" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm">
                   <Phone className="w-4 h-4 text-accent" />
-                  +7 (918) 784-61-21
+                  8 (495) 984-43-15
                 </a>
               </li>
               <li>
@@ -64,7 +64,7 @@ const Footer = () => {
               <li>
                 <div className="flex items-start gap-2 text-muted-foreground text-sm">
                   <MapPin className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                  <span>г. Пятигорск, ул. Ермолова д. 12, стр. 3</span>
+                  <span>123112, г. Москва, ул. Тестовская, д. 10, оф. 509</span>
                 </div>
               </li>
             </ul>
