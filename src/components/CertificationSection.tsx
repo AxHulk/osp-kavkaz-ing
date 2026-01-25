@@ -89,44 +89,6 @@ const CertificationSection = () => {
           ))}
         </div>
 
-        {/* Geomonitoring block */}
-        <div className="bg-card rounded-2xl p-8 md:p-10 border border-border animate-fade-in">
-          <div className="flex items-start gap-4 mb-6">
-            <div className="w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center flex-shrink-0">
-              <Activity className="w-7 h-7 text-accent" />
-            </div>
-            <div>
-              <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-2">
-                Геотехнический мониторинг
-              </h3>
-              <p className="text-muted-foreground">(геомониторинг)</p>
-            </div>
-          </div>
-          
-          <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
-            Геомониторинг — система слежения за параметрами, характеризующими основания зданий или сооружений 
-            (т.е. геологической среды), которая обеспечивает безопасное и эффективное осуществление 
-            строительно-технологических процессов, ввод и последующую эксплуатацию зданий и сооружений.
-          </p>
-
-          <div className="space-y-4">
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
-              <p className="text-foreground">
-                <span className="font-semibold text-accent">Целью геомониторинга</span> является обеспечение 
-                высокого качества строительства и сохранности зданий и сооружений окружающей застройки.
-              </p>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
-              <p className="text-foreground">
-                <span className="font-semibold text-accent">Задача геомониторинга</span> — регулярное отслеживание 
-                поведения основания строящегося сооружения и его конструкций, окружающих его зданий, а также 
-                принятие мер по обеспечению безопасного строительства и корректировки конструктивно-технологических решений.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
