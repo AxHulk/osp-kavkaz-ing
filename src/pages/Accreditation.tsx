@@ -98,8 +98,8 @@ const Accreditation = () => {
     { step: 2, title: "Анализ и принятие решения", description: "Назначаем экспертов, определяем схему и объем работ", time: "2-3 рабочих дня" },
     { step: 3, title: "Заключение договора", description: "Согласовываем стоимость, сроки и подписываем договор", time: "1-2 рабочих дня" },
     { step: 4, title: "Проведение работ", description: "Организуем отбор образцов, испытания в лаборатории, анализ производства", time: "Зависит от схемы" },
-    { step: 5, title: "Анализ результатов", description: "Эксперты анализируют протоколы испытаний и все полученные данные", time: "2-3 рабочих дня" },
-    { step: 6, title: "Принятие решения", description: "На основании анализа принимается решение о соответствии продукции", time: "1-2 рабочих дня" },
+    { step: 5, title: "Анализ результатов", description: "Эксперты анализируют протоколы испытаний и все полученные данные", time: "5-7 рабочих дней" },
+    { step: 6, title: "Принятие решения", description: "На основании анализа принимается решение о соответствии продукции", time: "2-3 рабочих дня" },
     { step: 7, title: "Оформление сертификата", description: "Регистрируем сертификат в реестре Росаккредитации и выдаем его вам", time: "1-2 рабочих дня" },
     { step: 8, title: "Инспекционный контроль", description: "Проводим периодические проверки в течение срока действия сертификата", time: "Ежегодно" }
   ];
@@ -567,12 +567,12 @@ const Accreditation = () => {
                     <div className="flex items-center gap-3 mb-4">
                       <FlaskConical className="w-8 h-8 text-accent" />
                       <div>
-                        <h3 className="font-semibold text-foreground">Испытательный центр «ПРОММАШ ТЕСТ»</h3>
-                        <span className="text-accent text-sm">RA.RU.21МЭ48</span>
+                        <h3 className="font-semibold text-foreground">Испытательный центр АО «ВНИКТИ»</h3>
+                        <span className="text-accent text-sm">RA.RU.10ЖД04 от 17.03.2015 г.</span>
                       </div>
                     </div>
                     <p className="text-foreground/70 text-sm">
-                      <strong>Специализация:</strong> Механические испытания, климатические испытания, неразрушающий контроль.
+                      Аккредитованный испытательный центр с многолетним опытом в области испытаний железнодорожной и канатной техники.
                     </p>
                   </div>
                   
@@ -580,12 +580,12 @@ const Accreditation = () => {
                     <div className="flex items-center gap-3 mb-4">
                       <FlaskConical className="w-8 h-8 text-accent" />
                       <div>
-                        <h3 className="font-semibold text-foreground">Лаборатория «СТАНДАРТ-ТЕСТ»</h3>
-                        <span className="text-accent text-sm">RA.RU.21АВ29</span>
+                        <h3 className="font-semibold text-foreground">ООО «ЦЕНТР ИСПЫТАНИЙ КАНАТНО-ТРАНСПОРТНЫХ СИСТЕМ»</h3>
+                        <span className="text-accent/70 text-sm italic">В процессе получения аттестата аккредитации</span>
                       </div>
                     </div>
                     <p className="text-foreground/70 text-sm">
-                      <strong>Специализация:</strong> Электротехнические испытания, испытания на электромагнитную совместимость.
+                      Специализированный центр для испытаний канатно-транспортных систем и их компонентов.
                     </p>
                   </div>
                 </div>
