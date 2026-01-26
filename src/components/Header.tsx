@@ -86,11 +86,11 @@ const Header = () => {
           {/* Phone & Menu */}
           <div className="flex items-center gap-4">
             <a 
-              href="tel:+79187846121" 
+              href="tel:+74959844315" 
               className="hidden md:flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors text-sm font-medium"
             >
               <Phone className="w-4 h-4" />
-              +7 (918) 784-61-21
+              8 (495) 984-43-15
             </a>
 
             {/* Mobile menu button */}
@@ -117,11 +117,11 @@ const Header = () => {
                 </button>
               ))}
               <a 
-                href="tel:+79187846121" 
+                href="tel:+74959844315" 
                 className="flex items-center gap-2 text-accent font-medium"
               >
                 <Phone className="w-4 h-4" />
-                +7 (918) 784-61-21
+                8 (495) 984-43-15
               </a>
             </div>
           </nav>

@@ -23,7 +23,7 @@ const HeroSection = () => {
       </div>
       
       <div className="section-container relative z-10 py-20">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto text-center">
           {/* Main heading */}
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 animate-slide-up leading-tight">
             Сертификация
@@ -32,14 +32,14 @@ const HeroSection = () => {
           </h1>
           
           {/* Subtitle */}
-          <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-10 max-w-2xl animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: "0.2s" }}>
             Профессиональная сертификация канатных дорог и их элементов.
             <br />
             Более 20 лет опыта в сложнейших инженерных проектах.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 animate-slide-up" style={{ animationDelay: "0.4s" }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: "0.4s" }}>
             <Button 
               onClick={scrollToContact}
               className="btn-primary text-base h-auto"
