@@ -2,6 +2,7 @@ import { Shield, CheckCircle2, Lock, Award, MapPin, FileCheck, ExternalLink, Arr
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactFormDialog from "@/components/ContactFormDialog";
+import OrgStructureSection from "@/components/OrgStructureSection";
 import aboutHero from "@/assets/about-hero.png";
 
 const About = () => {
@@ -146,6 +147,9 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Organizational Structure */}
+      <OrgStructureSection />
 
       {/* CTA Block */}
       <section className="py-20 md:py-32">
