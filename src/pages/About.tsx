@@ -59,7 +59,7 @@ const About = () => {
         <div className="relative z-10 section-container text-center pt-24">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 font-heading">
             Орган по сертификации<br />
-            <span className="text-accent">«Кавказ Инжиниринг»</span>
+            <span className="text-accent">ООО «КАВКАЗ-ИНЖИНИРИНГ»</span>
           </h1>
           <p className="text-xl md:text-2xl text-foreground/80 max-w-3xl mx-auto font-light">
             Где инженерный опыт встречается<br className="hidden md:block" /> с высочайшими стандартами безопасности.
