@@ -13,7 +13,11 @@ import {
   Calculator,
   ChevronRight,
   Mail,
-  Phone
+  Phone,
+  User,
+  Shield,
+  GraduationCap,
+  Briefcase
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -163,57 +167,172 @@ const Accreditation = () => {
               {/* 1. Структура ОСП */}
               <section id="structure" className="scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 font-heading">
-                  Структура Органа по сертификации
+                  Организационная структура ОСП
                 </h2>
                 <p className="text-foreground/80 mb-8">
-                  Структура нашего Органа по сертификации (ОСП) построена таким образом, чтобы обеспечить максимальную объективность, независимость и эффективность на всех этапах работы.
+                  Структура Органа по сертификации продукции ООО «КАВКАЗ-ИНЖИНИРИНГ» построена для обеспечения максимальной объективности, независимости и эффективности.
                 </p>
                 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="p-6 bg-card/30 rounded-xl border border-border">
-                    <div className="p-3 bg-accent/10 rounded-lg w-fit mb-4">
-                      <Building2 className="w-6 h-6 text-accent" />
+                {/* Top Level - CEO */}
+                <div className="flex justify-center mb-6">
+                  <div className="bg-accent/20 border-2 border-accent rounded-xl p-5 text-center min-w-[240px] shadow-lg">
+                    <div className="w-12 h-12 bg-accent/30 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <User className="w-6 h-6 text-accent" />
                     </div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Руководитель ОСП</h3>
-                    <p className="text-foreground/70 text-sm">
-                      Осуществляет общее руководство, представляет ОСП во взаимодействии с внешними организациями и несет ответственность за все принятые решения.
-                    </p>
-                  </div>
-                  
-                  <div className="p-6 bg-card/30 rounded-xl border border-border">
-                    <div className="p-3 bg-accent/10 rounded-lg w-fit mb-4">
-                      <Users className="w-6 h-6 text-accent" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Экспертная группа</h3>
-                    <p className="text-foreground/70 text-sm">
-                      Ключевое звено, состоящее из аттестованных экспертов. Проводит анализ документации, организует испытания и готовит экспертные заключения.
-                    </p>
-                  </div>
-                  
-                  <div className="p-6 bg-card/30 rounded-xl border border-border">
-                    <div className="p-3 bg-accent/10 rounded-lg w-fit mb-4">
-                      <Scale className="w-6 h-6 text-accent" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Апелляционная комиссия</h3>
-                    <p className="text-foreground/70 text-sm">
-                      Независимый орган, рассматривающий апелляции на решения ОСП. Состоит из компетентных специалистов, не принимавших участие в первоначальной оценке.
-                    </p>
-                  </div>
-                  
-                  <div className="p-6 bg-card/30 rounded-xl border border-border">
-                    <div className="p-3 bg-accent/10 rounded-lg w-fit mb-4">
-                      <ClipboardList className="w-6 h-6 text-accent" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">Группа по работе с заявителями</h3>
-                    <p className="text-foreground/70 text-sm">
-                      Отвечает за прием и регистрацию заявок, взаимодействие с клиентами, документооборот и информирование о ходе работ.
-                    </p>
+                    <h3 className="font-heading font-bold text-foreground">
+                      Генеральный директор
+                    </h3>
+                    <p className="text-foreground/60 text-sm">Общества</p>
                   </div>
                 </div>
-                
-                <p className="mt-6 p-4 bg-accent/10 rounded-lg text-foreground/80 text-sm border border-accent/20">
-                  Такая структура исключает конфликт интересов и гарантирует, что каждый этап сертификации проходит в строгом соответствии с утвержденными процедурами и принципами беспристрастности.
-                </p>
+
+                {/* Vertical connector */}
+                <div className="flex justify-center mb-4">
+                  <div className="w-0.5 h-6 bg-accent/40" />
+                </div>
+
+                {/* Second Level - Three bodies */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                  {/* Competence Commission */}
+                  <div className="bg-card/50 border border-border rounded-xl p-4 text-center hover:border-accent/30 transition-colors">
+                    <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center mx-auto mb-2">
+                      <ClipboardList className="w-5 h-5 text-accent" />
+                    </div>
+                    <h4 className="font-heading font-semibold text-foreground text-sm mb-1">
+                      Комиссия по оценке компетентности
+                    </h4>
+                    <p className="text-foreground/50 text-xs">ОСП</p>
+                  </div>
+
+                  {/* OSP Head */}
+                  <div className="bg-accent/15 border-2 border-accent/50 rounded-xl p-4 text-center">
+                    <div className="w-10 h-10 bg-accent/30 rounded-full flex items-center justify-center mx-auto mb-2">
+                      <Shield className="w-5 h-5 text-accent" />
+                    </div>
+                    <h4 className="font-heading font-semibold text-foreground text-sm mb-1">
+                      Руководитель ОСП
+                    </h4>
+                    <p className="text-foreground/50 text-xs">Орган по сертификации</p>
+                  </div>
+
+                  {/* Impartiality Council */}
+                  <div className="bg-card/50 border border-border rounded-xl p-4 text-center hover:border-accent/30 transition-colors">
+                    <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center mx-auto mb-2">
+                      <Scale className="w-5 h-5 text-accent" />
+                    </div>
+                    <h4 className="font-heading font-semibold text-foreground text-sm mb-1">
+                      Совет по обеспечению беспристрастности
+                    </h4>
+                    <p className="text-foreground/50 text-xs">ОСП</p>
+                  </div>
+                </div>
+
+                {/* Third Level Row */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 max-w-2xl mx-auto">
+                  {/* Appeals Commission */}
+                  <div className="bg-card/50 border border-border rounded-xl p-4 text-center hover:border-accent/30 transition-colors">
+                    <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center mx-auto mb-2">
+                      <Scale className="w-5 h-5 text-foreground/70" />
+                    </div>
+                    <h4 className="font-heading font-semibold text-foreground text-sm mb-1">
+                      Комиссия по апелляциям
+                    </h4>
+                    <p className="text-foreground/50 text-xs">ОСП</p>
+                  </div>
+
+                  {/* Deputy Head */}
+                  <div className="bg-card/50 border border-border rounded-xl p-4 text-center hover:border-accent/30 transition-colors">
+                    <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center mx-auto mb-2">
+                      <User className="w-5 h-5 text-foreground/70" />
+                    </div>
+                    <h4 className="font-heading font-semibold text-foreground text-sm mb-1">
+                      Заместитель руководителя ОСП
+                    </h4>
+                    <p className="text-foreground/50 text-xs">Орган по сертификации</p>
+                  </div>
+                </div>
+
+                {/* Core OSP Personnel */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                  {/* Experts */}
+                  <div className="bg-accent/10 border border-accent/30 rounded-xl p-4 text-center hover:border-accent/50 transition-colors">
+                    <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                      <Users className="w-5 h-5 text-accent" />
+                    </div>
+                    <h4 className="font-heading font-semibold text-foreground text-sm mb-1">
+                      Эксперты по сертификации продукции
+                    </h4>
+                    <p className="text-foreground/50 text-xs">ОСП</p>
+                  </div>
+
+                  {/* Quality Manager */}
+                  <div className="bg-card/50 border border-border rounded-xl p-4 text-center hover:border-accent/30 transition-colors">
+                    <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center mx-auto mb-2">
+                      <ClipboardList className="w-5 h-5 text-foreground/70" />
+                    </div>
+                    <h4 className="font-heading font-semibold text-foreground text-sm mb-1">
+                      Менеджер по качеству
+                    </h4>
+                    <p className="text-foreground/50 text-xs">ОСП</p>
+                  </div>
+
+                  {/* Trainees */}
+                  <div className="bg-card/50 border border-border rounded-xl p-4 text-center hover:border-accent/30 transition-colors">
+                    <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center mx-auto mb-2">
+                      <GraduationCap className="w-5 h-5 text-foreground/70" />
+                    </div>
+                    <h4 className="font-heading font-semibold text-foreground text-sm mb-1">
+                      Стажеры экспертов
+                    </h4>
+                    <p className="text-foreground/50 text-xs">по сертификации продукции ОСП</p>
+                  </div>
+                </div>
+
+                {/* Supporting Departments */}
+                <div className="border-t border-border pt-6">
+                  <h3 className="text-center text-foreground/60 text-sm font-medium mb-4 uppercase tracking-wide">
+                    Подразделения Общества
+                  </h3>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <div className="bg-secondary/50 border border-border/50 rounded-lg p-3 text-center">
+                      <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center mx-auto mb-2">
+                        <Calculator className="w-4 h-4 text-foreground/60" />
+                      </div>
+                      <h5 className="font-medium text-foreground/80 text-xs">Бухгалтерия</h5>
+                    </div>
+                    <div className="bg-secondary/50 border border-border/50 rounded-lg p-3 text-center">
+                      <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center mx-auto mb-2">
+                        <Briefcase className="w-4 h-4 text-foreground/60" />
+                      </div>
+                      <h5 className="font-medium text-foreground/80 text-xs">Отдел кадров</h5>
+                    </div>
+                    <div className="bg-secondary/50 border border-border/50 rounded-lg p-3 text-center">
+                      <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center mx-auto mb-2">
+                        <Settings className="w-4 h-4 text-foreground/60" />
+                      </div>
+                      <h5 className="font-medium text-foreground/80 text-xs">АХО</h5>
+                    </div>
+                    <div className="bg-muted/30 border border-dashed border-border rounded-lg p-3 text-center flex items-center justify-center">
+                      <p className="text-foreground/50 text-xs">Согласно штатному расписанию</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Legend */}
+                <div className="mt-6 flex flex-wrap justify-center gap-4 text-xs text-foreground/50">
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-0.5 bg-accent" />
+                    <span>Административное подчинение</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-0.5 border-t border-dashed border-foreground/30" />
+                    <span>Функциональное подчинение</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full border-2 border-accent/50 bg-accent/20" />
+                    <span>Ключевые позиции ОСП</span>
+                  </div>
+                </div>
               </section>
 
               {/* 2. Наши сотрудники */}
