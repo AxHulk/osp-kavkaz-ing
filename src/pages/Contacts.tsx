@@ -141,6 +141,20 @@ const Contacts = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 font-heading">
                 Свяжитесь с нами
               </h2>
+              
+              {/* Leadership */}
+              <div className="mb-8 p-5 bg-accent/10 rounded-xl border border-accent/20">
+                <h3 className="text-foreground font-semibold mb-4">Руководство</h3>
+                <div className="space-y-3">
+                  {leadership.map((item, index) => (
+                    <div key={index}>
+                      <span className="text-foreground/60 text-sm">{item.role}</span>
+                      <p className="text-foreground font-medium">{item.name}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
                   <div 
