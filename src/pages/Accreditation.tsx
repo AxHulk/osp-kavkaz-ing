@@ -26,6 +26,7 @@ const Accreditation = () => {
     { id: "structure", name: "Структура ОСП", icon: Building2 },
     { id: "team", name: "Наши сотрудники", icon: Users },
     { id: "documents", name: "Основные документы", icon: FileText },
+    { id: "scope", name: "Область аккредитации", icon: ClipboardList },
     { id: "schemes", name: "Схема сертификации", icon: GitBranch },
     { id: "application", name: "Заявка на сертификацию", icon: ClipboardList },
     { id: "process", name: "Порядок работы ОС", icon: Settings },
