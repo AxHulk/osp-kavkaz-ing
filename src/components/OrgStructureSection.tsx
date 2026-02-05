@@ -23,7 +23,8 @@ const OrgStructureSection = () => {
               <h3 className="font-heading font-bold text-foreground text-lg">
                 Генеральный директор
               </h3>
-              <p className="text-foreground/60 text-sm">Общества</p>
+              <p className="text-foreground/60 text-sm">ООО «КАВКАЗ-ИНЖИНИРИНГ»</p>
+              <p className="text-accent font-medium text-sm mt-2">Аниканов Александр Сергеевич</p>
             </div>
           </div>
 
@@ -68,6 +69,7 @@ const OrgStructureSection = () => {
                 Руководитель ОСП
               </h4>
               <p className="text-foreground/50 text-xs">Орган по сертификации</p>
+              <p className="text-accent font-medium text-xs mt-2">Гайманова Александра Александровна</p>
             </div>
           </div>
 

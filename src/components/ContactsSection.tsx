@@ -160,14 +160,14 @@ const ContactsSection = () => {
               </h3>
               <div className="space-y-4">
                 <div>
-                  <p className="text-sm text-muted-foreground mb-1">Юридический адрес:</p>
+                  <p className="text-sm text-muted-foreground mb-1">Место нахождения (юридический адрес):</p>
                   <p className="text-foreground">
-                    Российская Федерация, Ставропольский край, г. Пятигорск, ул. Ермолова д. 12, стр. 3
+                    357500, РОССИЯ, Ставропольский край, г. Пятигорск, ул. Ермолова, д.12, стр.3
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground mb-1">Фактический адрес:</p>
-                  <p className="text-foreground">123112, г. Москва, ул. Тестовская, д. 10, оф. 509</p>
+                  <p className="text-sm text-muted-foreground mb-1">Адрес места осуществления деятельности ОСП:</p>
+                  <p className="text-foreground">123112, РОССИЯ, г. Москва, вн.тер.г. муниципальный округ Пресненский, ул. Тестовская, д.10, оф.509</p>
                 </div>
               </div>
             </div>

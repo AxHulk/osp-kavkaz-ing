@@ -29,8 +29,8 @@ const Contacts = () => {
   const contactInfo = [
     {
       icon: Phone,
-      label: "Телефон для консультаций",
-      value: "8 (495) 984-43-15",
+      label: "Телефон",
+      value: "+7 (495) 984-43-15",
       href: "tel:+74959844315",
     },
     {
@@ -41,8 +41,8 @@ const Contacts = () => {
     },
     {
       icon: MapPin,
-      label: "Адрес офиса",
-      value: "123112, г. Москва, ул. Тестовская, д. 10, оф. 509",
+      label: "Адрес места осуществления деятельности ОСП",
+      value: "123112, РОССИЯ, г. Москва, вн.тер.г. муниципальный округ Пресненский, ул. Тестовская, д.10, оф.509",
     },
     {
       icon: Clock,
@@ -51,10 +51,21 @@ const Contacts = () => {
     },
   ];
 
+  const leadership = [
+    {
+      role: "Генеральный директор ООО «КАВКАЗ-ИНЖИНИРИНГ»",
+      name: "Аниканов Александр Сергеевич",
+    },
+    {
+      role: "Руководитель ОСП ООО «КАВКАЗ-ИНЖИНИРИНГ»",
+      name: "Гайманова Александра Александровна",
+    },
+  ];
+
   const requisites = {
     main: [
-      { label: "Полное наименование", value: "Общество с ограниченной ответственностью «Кавказ Инжиниринг»" },
-      { label: "Юридический адрес", value: "357500, Ставропольский край, г. Пятигорск, ул. Ермолова д. 12, стр. 3" },
+      { label: "Полное наименование", value: "Общество с ограниченной ответственностью «КАВКАЗ-ИНЖИНИРИНГ»" },
+      { label: "Место нахождения (юридический адрес)", value: "357500, РОССИЯ, Ставропольский край, г. Пятигорск, ул. Ермолова, д.12, стр.3" },
       { label: "ИНН / КПП", value: "2632125791 / 263201001" },
       { label: "ОГРН", value: "1252600004249" },
     ],
@@ -130,6 +141,20 @@ const Contacts = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 font-heading">
                 Свяжитесь с нами
               </h2>
+              
+              {/* Leadership */}
+              <div className="mb-8 p-5 bg-accent/10 rounded-xl border border-accent/20">
+                <h3 className="text-foreground font-semibold mb-4">Руководство</h3>
+                <div className="space-y-3">
+                  {leadership.map((item, index) => (
+                    <div key={index}>
+                      <span className="text-foreground/60 text-sm">{item.role}</span>
+                      <p className="text-foreground font-medium">{item.name}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
                   <div 
