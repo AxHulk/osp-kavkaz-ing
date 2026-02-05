@@ -26,6 +26,7 @@ const Accreditation = () => {
     { id: "structure", name: "Структура ОСП", icon: Building2 },
     { id: "team", name: "Наши сотрудники", icon: Users },
     { id: "documents", name: "Основные документы", icon: FileText },
+    { id: "scope", name: "Область аккредитации", icon: ClipboardList },
     { id: "schemes", name: "Схема сертификации", icon: GitBranch },
     { id: "application", name: "Заявка на сертификацию", icon: ClipboardList },
     { id: "process", name: "Порядок работы ОС", icon: Settings },
@@ -115,7 +116,7 @@ const Accreditation = () => {
             Аккредитация
           </h1>
           <p className="text-lg md:text-xl text-foreground/70 max-w-4xl mx-auto">
-            Полный свод правил, процедур и документов, регламентирующих деятельность Органа по сертификации ООО «Кавказ Инжиниринг». Ваш навигатор в мире подтверждения соответствия.
+            Полный свод правил, процедур и документов, регламентирующих деятельность Органа по сертификации ООО «КАВКАЗ-ИНЖИНИРИНГ». Ваш навигатор в мире подтверждения соответствия.
           </p>
         </div>
       </section>
@@ -271,7 +272,50 @@ const Accreditation = () => {
                 </div>
               </section>
 
-              {/* 4. Схема сертификации */}
+              {/* 4. Область аккредитации */}
+              <section id="scope" className="scroll-mt-28">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 font-heading">
+                  Область аккредитации
+                </h2>
+                <p className="text-foreground/80 mb-6">
+                  Область аккредитации Органа по сертификации продукции (ОСП) ООО «КАВКАЗ-ИНЖИНИРИНГ» охватывает оборудование одноканатных кольцевых пассажирских подвесных канатных дорог.
+                </p>
+                
+                <div className="p-6 bg-card/30 rounded-xl border border-border">
+                  <h3 className="text-lg font-semibold text-foreground mb-4">
+                    Перечень сертифицируемого оборудования
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-3">
+                    {[
+                      { name: "Зажимы фиксированные", code: "8431 39 000 0" },
+                      { name: "Зажимы отцепляемые", code: "8431 39 000 0" },
+                      { name: "Кабины", code: "8431 39 000 0" },
+                      { name: "Кабины для пассажиров, относящихся к маломобильным группам населения", code: "8431 39 000 0" },
+                      { name: "Кресла открытые", code: "8431 39 000 0" },
+                      { name: "Кресла с защитным колпаком", code: "8431 39 000 0" },
+                      { name: "Подвески кабин и кресел", code: "8431 39 000 0" },
+                      { name: "Промежуточные рамы", code: "8431 39 000 0" },
+                      { name: "Шкивы приводные, обводные в сборе", code: "8483" },
+                      { name: "Шкивы натяжные", code: "8483" },
+                      { name: "Грузовые натяжные устройства", code: "8412 21 800 8" },
+                      { name: "Натяжные тележки", code: "8431 39 000 0" },
+                      { name: "Гидравлические цилиндры натяжного устройства", code: "8431 39 000 0" },
+                      { name: "Рабочие и аварийные тормоза", code: "8431 39 000 0" },
+                      { name: "Направляющие ролики и роликовые балансиры", code: "8431 39 000 0" },
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-2 p-3 bg-background/50 rounded-lg">
+                        <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                        <div>
+                          <span className="text-foreground/90 text-sm">{item.name}</span>
+                          <span className="text-foreground/50 text-xs ml-2">(ТН ВЭД ЕАЭС: {item.code})</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
+
+              {/* 5. Схема сертификации */}
               <section id="schemes" className="scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 font-heading">
                   Схемы подтверждения соответствия
