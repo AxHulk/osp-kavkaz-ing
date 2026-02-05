@@ -613,41 +613,281 @@ const Accreditation = () => {
               {/* 5. Схема сертификации */}
               <section id="schemes" className="scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 font-heading">
-                  Схемы подтверждения соответствия
+                  Схемы сертификации
                 </h2>
-                <p className="text-foreground/80 mb-8">
-                  Мы применяем различные схемы сертификации, установленные в технических регламентах. Выбор конкретной схемы зависит от типа продукции, уровня ее потенциальной опасности и других факторов.
+                <p className="text-foreground/80 mb-4">
+                  Согласно Приложения №1 Документированной процедуры «Оценка (подтверждение) соответствия продукции» ДП-02.09, а также ГОСТ Р 53603-2020 «Оценка соответствия. Схемы сертификации продукции в Российской Федерации», применительно к области аккредитации ОСП ООО «КАВКАЗ-ИНЖИНИРИНГ», типовыми схемами сертификации являются:
                 </p>
                 
-                <div className="space-y-4">
+                <div className="space-y-8">
+                  {/* Схема 1с */}
                   <div className="p-6 bg-card/30 rounded-xl border border-border">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="px-3 py-1 bg-accent text-accent-foreground text-sm font-bold rounded">1с</span>
-                      <span className="text-foreground/60 text-sm">Продукция серийного производства</span>
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="px-4 py-2 bg-accent text-accent-foreground text-lg font-bold rounded-lg">1с</span>
+                      <div>
+                        <h3 className="text-lg font-semibold text-foreground">Серийно выпускаемая продукция</h3>
+                        <p className="text-foreground/60 text-sm">С инспекционным контролем</p>
+                      </div>
                     </div>
-                    <p className="text-foreground/70 text-sm">
-                      Включает: подачу заявки, испытания типового образца, анализ состояния производства, выдачу сертификата и последующий инспекционный контроль.
+                    
+                    {/* Заявитель */}
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                        <Users className="w-5 h-5 text-accent" />
+                        Заявитель
+                      </h4>
+                      <p className="text-foreground/60 text-xs mb-3 italic">
+                        Изготовитель; уполномоченное изготовителем лицо — в случае, если продукция изготовлена за пределами РФ
+                      </p>
+                      <div className="space-y-2">
+                        {[
+                          "Подает заявку на сертификацию продукции с прилагаемыми документами",
+                          "Заключает договор(ы) на выполнение работ по сертификации и проведению исследований (испытаний) и измерений",
+                          "Предоставляет продукцию для проведения идентификации и отбора образцов (проб)",
+                          "Создает условия для проведения анализа состояния производства",
+                          "Заключает договор на выполнение работ по проведению инспекционного контроля",
+                          "Маркирует продукцию единым знаком обращения на рынке (знаком соответствия)",
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-start gap-2">
+                            <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                            <span className="text-foreground/80 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Орган по сертификации */}
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                        <Shield className="w-5 h-5 text-accent" />
+                        Орган по сертификации
+                      </h4>
+                      <div className="space-y-2">
+                        {[
+                          "Проводит анализ документов, представленных заявителем",
+                          "Заключает договор на выполнение работ по сертификации",
+                          "Проводит идентификацию продукции и отбор образцов (проб) для проведения исследований",
+                          "Направляет продукцию в испытательную лабораторию",
+                          "Проводит анализ состояния производства",
+                          "Обобщает результаты анализа документов, исследований и анализа состояния производства",
+                          "Принимает решение о выдаче (отказе в выдаче) сертификата соответствия",
+                          "Вносит сведения о выданном сертификате в единый реестр Росаккредитации",
+                          "Заключает договор на проведение инспекционного контроля и осуществляет его",
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-start gap-2">
+                            <ChevronRight className="w-4 h-4 text-foreground/50 shrink-0 mt-0.5" />
+                            <span className="text-foreground/80 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Испытательная лаборатория */}
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                        <FlaskConical className="w-5 h-5 text-accent" />
+                        Испытательная лаборатория
+                      </h4>
+                      <div className="space-y-2">
+                        {[
+                          "Заключает договор на проведение исследований (испытаний) и измерений продукции",
+                          "Проводит исследования (испытания) и измерения продукции при сертификации и/или инспекционном контроле",
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-start gap-2">
+                            <ChevronRight className="w-4 h-4 text-foreground/50 shrink-0 mt-0.5" />
+                            <span className="text-foreground/80 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Схема 3с */}
+                  <div className="p-6 bg-card/30 rounded-xl border border-border">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="px-4 py-2 bg-accent text-accent-foreground text-lg font-bold rounded-lg">3с</span>
+                      <div>
+                        <h3 className="text-lg font-semibold text-foreground">Партия продукции</h3>
+                        <p className="text-foreground/60 text-sm">Без инспекционного контроля</p>
+                      </div>
+                    </div>
+                    
+                    {/* Заявитель */}
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                        <Users className="w-5 h-5 text-accent" />
+                        Заявитель
+                      </h4>
+                      <p className="text-foreground/60 text-xs mb-3 italic">
+                        Изготовитель; уполномоченное изготовителем лицо; продавец (импортер)
+                      </p>
+                      <div className="space-y-2">
+                        {[
+                          "Подает заявку на сертификацию продукции с прилагаемыми документами",
+                          "Заключает договор(ы) на выполнение работ по сертификации и проведению исследований (испытаний) и измерений",
+                          "Предоставляет продукцию для проведения идентификации и отбора образцов (проб)",
+                          "Маркирует продукцию единым знаком обращения на рынке (знаком соответствия)",
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-start gap-2">
+                            <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                            <span className="text-foreground/80 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Орган по сертификации */}
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                        <Shield className="w-5 h-5 text-accent" />
+                        Орган по сертификации
+                      </h4>
+                      <div className="space-y-2">
+                        {[
+                          "Проводит анализ документов, представленных заявителем",
+                          "Заключает договор на выполнение работ по сертификации",
+                          "Проводит идентификацию продукции и отбор образцов (проб) для проведения исследований",
+                          "Направляет продукцию в испытательную лабораторию",
+                          "Обобщает результаты анализа документов и результаты исследований образцов продукции",
+                          "Принимает решение о выдаче (отказе в выдаче) сертификата соответствия",
+                          "Вносит сведения о выданном сертификате в единый реестр Росаккредитации",
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-start gap-2">
+                            <ChevronRight className="w-4 h-4 text-foreground/50 shrink-0 mt-0.5" />
+                            <span className="text-foreground/80 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Испытательная лаборатория */}
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                        <FlaskConical className="w-5 h-5 text-accent" />
+                        Испытательная лаборатория
+                      </h4>
+                      <div className="space-y-2">
+                        {[
+                          "Заключает договор на проведение исследований (испытаний) и измерений продукции",
+                          "Проводит исследования (испытания) и измерения продукции при сертификации",
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-start gap-2">
+                            <ChevronRight className="w-4 h-4 text-foreground/50 shrink-0 mt-0.5" />
+                            <span className="text-foreground/80 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Схема 9с */}
+                  <div className="p-6 bg-card/30 rounded-xl border border-border">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="px-4 py-2 bg-accent text-accent-foreground text-lg font-bold rounded-lg">9с</span>
+                      <div>
+                        <h3 className="text-lg font-semibold text-foreground">Единичные изделия</h3>
+                        <p className="text-foreground/60 text-sm">Для оснащения предприятий на территории РФ</p>
+                      </div>
+                    </div>
+                    
+                    {/* Заявитель */}
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                        <Users className="w-5 h-5 text-accent" />
+                        Заявитель
+                      </h4>
+                      <p className="text-foreground/60 text-xs mb-3 italic">
+                        Изготовитель; уполномоченное изготовителем лицо; продавец (импортер)
+                      </p>
+                      <div className="space-y-2">
+                        {[
+                          "Подает заявку на сертификацию продукции с прилагаемыми документами",
+                          "Заключает договор на выполнение работ по сертификации",
+                          "Маркирует продукцию единым знаком обращения на рынке (знаком соответствия)",
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-start gap-2">
+                            <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                            <span className="text-foreground/80 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Орган по сертификации */}
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                        <Shield className="w-5 h-5 text-accent" />
+                        Орган по сертификации
+                      </h4>
+                      <div className="space-y-2">
+                        {[
+                          "Проводит анализ документов, представленных заявителем",
+                          "Заключает договор на выполнение работ по сертификации",
+                          "Проводит анализ технической документации на продукцию",
+                          "Обобщает результаты анализа документов и технической документации",
+                          "Принимает решение о выдаче (отказе в выдаче) сертификата соответствия",
+                          "Вносит сведения о выданном сертификате в единый реестр Росаккредитации",
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-start gap-2">
+                            <ChevronRight className="w-4 h-4 text-foreground/50 shrink-0 mt-0.5" />
+                            <span className="text-foreground/80 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <p className="mt-4 text-foreground/60 text-xs italic">
+                      Примечание: Схема 9с не предусматривает проведение испытаний в лаборатории — оценка проводится на основе анализа технической документации.
                     </p>
                   </div>
-                  
-                  <div className="p-6 bg-card/30 rounded-xl border border-border">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="px-3 py-1 bg-accent text-accent-foreground text-sm font-bold rounded">3с</span>
-                      <span className="text-foreground/60 text-sm">Партия продукции</span>
-                    </div>
-                    <p className="text-foreground/70 text-sm">
-                      Включает: подачу заявки, испытания образца из партии, выдачу сертификата (действует только для данной партии).
-                    </p>
-                  </div>
-                  
-                  <div className="p-6 bg-card/30 rounded-xl border border-border">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="px-3 py-1 bg-accent text-accent-foreground text-sm font-bold rounded">9с</span>
-                      <span className="text-foreground/60 text-sm">Единичное изделие</span>
-                    </div>
-                    <p className="text-foreground/70 text-sm">
-                      Включает: подачу заявки и анализ технической документации. Применяется для продукции, безопасность которой зависит от качества монтажа.
-                    </p>
+                </div>
+
+                {/* Сравнительная таблица */}
+                <div className="mt-8 p-6 bg-accent/10 rounded-xl border border-accent/30">
+                  <h3 className="text-lg font-semibold text-foreground mb-4">Сравнение схем сертификации</h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm border-collapse">
+                      <thead>
+                        <tr className="bg-accent/20">
+                          <th className="border border-border p-3 text-left text-foreground font-semibold">Характеристика</th>
+                          <th className="border border-border p-3 text-center text-foreground font-semibold">1с</th>
+                          <th className="border border-border p-3 text-center text-foreground font-semibold">3с</th>
+                          <th className="border border-border p-3 text-center text-foreground font-semibold">9с</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td className="border border-border p-3 text-foreground/80">Тип продукции</td>
+                          <td className="border border-border p-3 text-center text-foreground/80">Серийная</td>
+                          <td className="border border-border p-3 text-center text-foreground/80">Партия</td>
+                          <td className="border border-border p-3 text-center text-foreground/80">Единичное изделие</td>
+                        </tr>
+                        <tr className="bg-card/30">
+                          <td className="border border-border p-3 text-foreground/80">Испытания в лаборатории</td>
+                          <td className="border border-border p-3 text-center text-accent">✓</td>
+                          <td className="border border-border p-3 text-center text-accent">✓</td>
+                          <td className="border border-border p-3 text-center text-foreground/50">—</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-border p-3 text-foreground/80">Анализ производства</td>
+                          <td className="border border-border p-3 text-center text-accent">✓</td>
+                          <td className="border border-border p-3 text-center text-foreground/50">—</td>
+                          <td className="border border-border p-3 text-center text-foreground/50">—</td>
+                        </tr>
+                        <tr className="bg-card/30">
+                          <td className="border border-border p-3 text-foreground/80">Инспекционный контроль</td>
+                          <td className="border border-border p-3 text-center text-accent">✓</td>
+                          <td className="border border-border p-3 text-center text-foreground/50">—</td>
+                          <td className="border border-border p-3 text-center text-foreground/50">—</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-border p-3 text-foreground/80">Анализ техдокументации</td>
+                          <td className="border border-border p-3 text-center text-foreground/50">—</td>
+                          <td className="border border-border p-3 text-center text-foreground/50">—</td>
+                          <td className="border border-border p-3 text-center text-accent">✓</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </section>
