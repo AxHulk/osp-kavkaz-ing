@@ -1256,43 +1256,180 @@ const Accreditation = () => {
               {/* 9. Рассмотрение апелляций */}
               <section id="appeals" className="scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 font-heading">
-                  Рассмотрение апелляций
+                  Правила рассмотрения апелляций
                 </h2>
-                <p className="text-foreground/80 mb-8">
-                  Если вы не согласны с решением, принятым Органом по сертификации (например, с отказом в выдаче сертификата), вы имеете право подать апелляцию.
-                </p>
                 
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 bg-card/30 rounded-xl border border-border">
-                    <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm shrink-0">1</span>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Как подать</h3>
-                      <p className="text-foreground/70 text-sm">Апелляция подается в письменной форме в Апелляционную комиссию Органа по сертификации.</p>
-                    </div>
+                <div className="p-6 bg-card/30 rounded-xl border border-border mb-8">
+                  <p className="text-foreground/80 leading-relaxed">
+                    Рассмотрение апелляций в ОСП ООО «КАВКАЗ-ИНЖИНИРИНГ» осуществляется в соответствии с документированной процедурой «Порядок рассмотрения жалоб, обращений и апелляций» ДП-02.08 (в действующей редакции), являющейся частью документов системы менеджмента качества ОСП ООО «КАВКАЗ-ИНЖИНИРИНГ».
+                  </p>
+                </div>
+
+                <h3 className="text-xl font-semibold text-foreground mb-4 font-heading">Определения</h3>
+                
+                <div className="space-y-4 mb-8">
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <h4 className="text-foreground font-semibold mb-2 flex items-center gap-2">
+                      <AlertCircle className="w-5 h-5 text-accent" />
+                      Апелляция
+                    </h4>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      Запрос представителя объекта оценки (подтверждения) соответствия в ОСП ООО «КАВКАЗ-ИНЖИНИРИНГ» о пересмотре решения, принятого ОСП ООО «КАВКАЗ-ИНЖИНИРИНГ» в отношении данного объекта.
+                    </p>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-card/30 rounded-xl border border-border">
-                    <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm shrink-0">2</span>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Содержание</h3>
-                      <p className="text-foreground/70 text-sm">Четко изложите, с каким решением вы не согласны и предоставьте аргументы в свою пользу.</p>
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <h4 className="text-foreground font-semibold mb-2 flex items-center gap-2">
+                      <User className="w-5 h-5 text-accent" />
+                      Апеллянт
+                    </h4>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      Юридическое лицо и/или физическое лицо, в т.ч. которое может быть зарегистрировано в качестве индивидуального предпринимателя.
+                    </p>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-semibold text-foreground mb-4 font-heading">Право на подачу апелляции</h3>
+                
+                <div className="p-6 bg-card/30 rounded-xl border border-border mb-8">
+                  <p className="text-foreground/80 text-sm leading-relaxed">
+                    Апеллянт вправе подать апелляцию с запросом о пересмотре решения по жалобе, обращению, принятого ОСП ООО «КАВКАЗ-ИНЖИНИРИНГ» по результатам выполнения работ (оказания услуг) по оценке (подтверждению) соответствия продукции.
+                  </p>
+                </div>
+
+                <h3 className="text-xl font-semibold text-foreground mb-4 font-heading">Комиссия по апелляциям</h3>
+                
+                <div className="space-y-3 mb-8">
+                  <div className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-border">
+                    <ChevronRight className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                    <p className="text-foreground/70 text-sm">После подачи апелляции создается Комиссия по апелляциям. Возглавляет Комиссию председатель, назначенный приказом Генерального директора ООО «КАВКАЗ-ИНЖИНИРИНГ».</p>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-border">
+                    <ChevronRight className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                    <p className="text-foreground/70 text-sm">Состав Комиссии (из лиц, не имеющих отношения к предмету апелляции) и объём её работы устанавливает председатель Комиссии.</p>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-border">
+                    <ChevronRight className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                    <p className="text-foreground/70 text-sm">В состав Комиссии не могут быть включены работники, принимавшие участие в подготовке и обосновании рассматриваемого решения.</p>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-border">
+                    <ChevronRight className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                    <p className="text-foreground/70 text-sm">Для работы в Комиссии могут быть привлечены специалисты сторонних организаций, обладающие знаниями в области рассматриваемого вопроса.</p>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-semibold text-foreground mb-4 font-heading">Порядок подачи и рассмотрения</h3>
+                
+                <div className="grid md:grid-cols-2 gap-4 mb-8">
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm">1</span>
+                      <h4 className="text-foreground font-semibold">Оформление</h4>
                     </div>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      Апелляция должна быть оформлена по установленной форме с указанием причин спора, обоснованием несогласия с решением и приложением документов.
+                    </p>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-card/30 rounded-xl border border-border">
-                    <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm shrink-0">3</span>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Процедура</h3>
-                      <p className="text-foreground/70 text-sm">Апелляционная комиссия, состоящая из независимых экспертов, проводит повторный анализ всех материалов дела.</p>
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm">2</span>
+                      <h4 className="text-foreground font-semibold">Сроки подачи</h4>
                     </div>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      Апелляция подается по почте, на электронный адрес ОСП или нарочно не позднее чем через <strong className="text-accent">30 календарных дней</strong> после вынесения решения.
+                    </p>
                   </div>
                   
-                  <div className="flex items-start gap-4 p-4 bg-card/30 rounded-xl border border-border">
-                    <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm shrink-0">4</span>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Сроки</h3>
-                      <p className="text-foreground/70 text-sm">Срок рассмотрения апелляции и вынесения решения — не более <strong className="text-accent">15 рабочих дней</strong>.</p>
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm">3</span>
+                      <h4 className="text-foreground font-semibold">Регистрация</h4>
                     </div>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      Регистрация апелляции осуществляется в день поступления. Получение подтверждается апеллянту не позднее <strong className="text-accent">1 рабочего дня</strong>.
+                    </p>
+                  </div>
+                  
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm">4</span>
+                      <h4 className="text-foreground font-semibold">Создание Комиссии</h4>
+                    </div>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      Комиссия должна быть организована в течение <strong className="text-accent">3 рабочих дней</strong> со дня регистрации апелляции.
+                    </p>
+                  </div>
+                  
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm">5</span>
+                      <h4 className="text-foreground font-semibold">Первоначальный ответ</h4>
+                    </div>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      Первоначальный ответ направляется апеллянту не позднее чем через <strong className="text-accent">5 рабочих дней</strong> со дня получения и регистрации апелляции.
+                    </p>
+                  </div>
+                  
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm">6</span>
+                      <h4 className="text-foreground font-semibold">Рассмотрение</h4>
+                    </div>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      Общий срок рассмотрения апелляции составляет <strong className="text-accent">10 рабочих дней</strong> со дня регистрации.
+                    </p>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-semibold text-foreground mb-4 font-heading">Решение по апелляции</h3>
+                
+                <div className="p-6 bg-card/30 rounded-xl border border-border mb-6">
+                  <p className="text-foreground/80 text-sm leading-relaxed mb-4">
+                    Комиссия принимает решение простым большинством голосов, открытым голосованием, оформляет его протоколом заседания. Решение подписывается всеми членами Комиссии, менеджером по качеству ОСП и Генеральным директором ООО «КАВКАЗ-ИНЖИНИРИНГ».
+                  </p>
+                  
+                  <h4 className="text-foreground font-semibold mb-3">Решение должно содержать:</h4>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2 text-foreground/70 text-sm">
+                      <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <span>При отказе в удовлетворении: причины отказа со ссылкой на законодательные акты и нормативные документы</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-foreground/70 text-sm">
+                      <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <span>Перечень документов, подтверждающих обоснованность решения</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-foreground/70 text-sm">
+                      <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <span>При удовлетворении апелляции: срок и способ её удовлетворения</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-foreground/70 text-sm">
+                      <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <span>При наличии особого мнения членов Комиссии — оно должно быть отражено в решении</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="p-5 bg-accent/10 rounded-xl border border-accent/20 mb-8">
+                  <p className="text-foreground/80 text-sm leading-relaxed">
+                    <strong className="text-foreground">Принятие решения:</strong> Решение по апелляции высылается апеллянту на адрес места осуществления деятельности в письменном виде не позднее 10 рабочих дней со дня регистрации апелляции. Если в течение <strong className="text-accent">10 календарных дней</strong> с момента отправления не поступило возражение от апеллянта, оно считается принятым. В случае несогласия с решением Комиссии апеллянт имеет право обжаловать решение в вышестоящих инстанциях.
+                  </p>
+                </div>
+
+                <div className="p-6 bg-accent/10 rounded-xl border border-accent/30">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                      <h4 className="text-foreground font-semibold mb-1">Скачать форму апелляции</h4>
+                      <p className="text-foreground/70 text-sm">Форма подачи апелляции (формат .docx)</p>
+                    </div>
+                    <a
+                      href="/documents/Форма_подачи_Апелляции.docx"
+                      download
+                      className="inline-flex items-center gap-2 px-5 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-colors whitespace-nowrap"
+                    >
+                      <FileText className="w-4 h-4" />
+                      Скачать форму
+                    </a>
                   </div>
                 </div>
               </section>
