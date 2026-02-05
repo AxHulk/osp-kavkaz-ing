@@ -1131,35 +1131,124 @@ const Accreditation = () => {
               {/* 8. Рассмотрение жалоб */}
               <section id="complaints" className="scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 font-heading">
-                  Правила рассмотрения жалоб
+                  Правила рассмотрения жалоб и обращений
                 </h2>
-                <p className="text-foreground/80 mb-8">
-                  Мы стремимся к высочайшему качеству услуг, но если у вас возникли претензии к работе наших сотрудников, вы можете подать жалобу. Каждое обращение будет рассмотрено объективно и беспристрастно.
-                </p>
                 
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="p-6 bg-card/30 rounded-xl border border-border text-center">
-                    <Mail className="w-10 h-10 text-accent mx-auto mb-4" />
-                    <h3 className="font-semibold text-foreground mb-2">Как подать</h3>
-                    <p className="text-foreground/70 text-sm">
-                      Жалоба подается в письменной форме на имя руководителя ОСП и направляется на электронную почту
+                <div className="p-6 bg-card/30 rounded-xl border border-border mb-8">
+                  <p className="text-foreground/80 mb-4 leading-relaxed">
+                    Рассмотрение жалоб и обращений в ОСП ООО «КАВКАЗ-ИНЖИНИРИНГ» осуществляется в соответствии с документированной процедурой «Порядок рассмотрения жалоб, обращений и апелляций» ДП-02.08 (в действующей редакции), являющейся частью документов системы менеджмента качества ОСП ООО «КАВКАЗ-ИНЖИНИРИНГ».
+                  </p>
+                </div>
+
+                <h3 className="text-xl font-semibold text-foreground mb-4 font-heading">Определения</h3>
+                
+                <div className="space-y-4 mb-8">
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <h4 className="text-foreground font-semibold mb-2 flex items-center gap-2">
+                      <MessageSquare className="w-5 h-5 text-accent" />
+                      Жалоба (претензия)
+                    </h4>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      Просьба юридического лица и/или физического лица, в т.ч. которое может быть зарегистрировано в качестве индивидуального предпринимателя, а также сообщества (ассоциации, общественной организации) юридических и/или физических лиц, иных организаций и учреждений, в т.ч. Федеральной службы по аккредитации и/или органов государственного контроля (надзора), о восстановлении или защите его нарушенных прав, свобод или законных интересов, ожидающая ответа.
                     </p>
                   </div>
                   
-                  <div className="p-6 bg-card/30 rounded-xl border border-border text-center">
-                    <FileText className="w-10 h-10 text-accent mx-auto mb-4" />
-                    <h3 className="font-semibold text-foreground mb-2">Содержание</h3>
-                    <p className="text-foreground/70 text-sm">
-                      Укажите суть претензии, факты и обстоятельства, а также ваши контактные данные
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <h4 className="text-foreground font-semibold mb-2 flex items-center gap-2">
+                      <FileText className="w-5 h-5 text-accent" />
+                      Обращение
+                    </h4>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      Направленные в ОСП ООО «КАВКАЗ-ИНЖИНИРИНГ», Федеральную службу по аккредитации в письменной форме или в форме электронного документа предложение, заявление или жалоба, а также устное обращение гражданина (личного, индивидуального и коллективного).
                     </p>
                   </div>
                   
-                  <div className="p-6 bg-card/30 rounded-xl border border-border text-center">
-                    <Settings className="w-10 h-10 text-accent mx-auto mb-4" />
-                    <h3 className="font-semibold text-foreground mb-2">Сроки</h3>
-                    <p className="text-foreground/70 text-sm">
-                      Срок рассмотрения и предоставления ответа — не более <strong className="text-accent">10 рабочих дней</strong>
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <h4 className="text-foreground font-semibold mb-2 flex items-center gap-2">
+                      <User className="w-5 h-5 text-accent" />
+                      Заявитель жалобы, обращения
+                    </h4>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      Юридическое лицо и/или физическое лицо, в т.ч. которое может быть зарегистрировано в качестве индивидуального предпринимателя, а также сообщества (ассоциации, общественные организации) юридических и/или физических лиц, иные организации и учреждения, в т.ч. Федеральная служба по аккредитации и/или органы государственного контроля (надзора).
                     </p>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-semibold text-foreground mb-4 font-heading">Право на подачу жалобы</h3>
+                
+                <div className="p-6 bg-card/30 rounded-xl border border-border mb-8">
+                  <p className="text-foreground/80 text-sm leading-relaxed mb-4">
+                    Юридические и физические лица, в т.ч. индивидуальные предприниматели, сообщества (ассоциации, общественные организации), иные организации и учреждения, в т.ч. Росаккредитация и органы государственного контроля (надзора), имеют право направлять в ОСП ООО «КАВКАЗ-ИНЖИНИРИНГ» жалобы и обращения, относящиеся к деятельности по оценке (подтверждению) соответствия.
+                  </p>
+                  <p className="text-foreground/80 text-sm leading-relaxed">
+                    Заявителем жалобы, обращения может быть любая организация или лицо-участник процесса оценки (подтверждения) соответствия продукции, или лицо, заинтересованное в оценке (подтверждении) соответствия продукции, право которой или иных лиц, по её мнению, нарушено.
+                  </p>
+                </div>
+
+                <h3 className="text-xl font-semibold text-foreground mb-4 font-heading">Порядок подачи и рассмотрения</h3>
+                
+                <div className="grid md:grid-cols-2 gap-4 mb-8">
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm">1</span>
+                      <h4 className="text-foreground font-semibold">Подача</h4>
+                    </div>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      Жалоба, обращение подается на имя Генерального директора ООО «КАВКАЗ-ИНЖИНИРИНГ» по почте, на электронный адрес ОСП или нарочно в письменном виде.
+                    </p>
+                  </div>
+                  
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm">2</span>
+                      <h4 className="text-foreground font-semibold">Содержание</h4>
+                    </div>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      Должны быть указаны причины разногласия, приведены соответствующие документы. Допустимо также оформлять жалобу в свободной письменной форме.
+                    </p>
+                  </div>
+                  
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm">3</span>
+                      <h4 className="text-foreground font-semibold">Регистрация</h4>
+                    </div>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      Жалоба подлежит регистрации не позднее следующего рабочего дня со дня получения. Получение подтверждается отправителю не позднее <strong className="text-accent">1 рабочего дня</strong>.
+                    </p>
+                  </div>
+                  
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm">4</span>
+                      <h4 className="text-foreground font-semibold">Рассмотрение</h4>
+                    </div>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      Решение оформляется Менеджером по качеству ОСП не позднее <strong className="text-accent">10 рабочих дней</strong> со дня получения жалобы.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-5 bg-accent/10 rounded-xl border border-accent/20 mb-8">
+                  <p className="text-foreground/80 text-sm leading-relaxed">
+                    <strong className="text-foreground">Принятие решения:</strong> Решение по жалобе высылается на адрес заявителя в письменном виде не позднее 10 рабочих дней со дня получения. Если в течение 10 рабочих дней с момента отправления не поступило возражений (за исключением решений по жалобам, поступившим из Росаккредитации), оно считается принятым.
+                  </p>
+                </div>
+
+                <div className="p-6 bg-accent/10 rounded-xl border border-accent/30">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                      <h4 className="text-foreground font-semibold mb-1">Скачать форму жалобы/обращения</h4>
+                      <p className="text-foreground/70 text-sm">Образец формы подачи жалобы или обращения (формат .docx)</p>
+                    </div>
+                    <a
+                      href="/documents/Форма_подачи_Жалобы_обращения.docx"
+                      download
+                      className="inline-flex items-center gap-2 px-5 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-colors whitespace-nowrap"
+                    >
+                      <FileText className="w-4 h-4" />
+                      Скачать форму
+                    </a>
                   </div>
                 </div>
               </section>
