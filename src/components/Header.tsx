@@ -65,7 +65,7 @@ const Header = () => {
           <Link to="/" className="flex items-center">
             <img 
               src={logo} 
-              alt="Кавказ Инжиниринг" 
+              alt="КАВКАЗ-ИНЖИНИРИНГ" 
               className="h-10 md:h-12 w-auto brightness-0 invert"
             />
           </Link>
