@@ -989,56 +989,283 @@ const Accreditation = () => {
               {/* 11. Стоимость работ */}
               <section id="pricing" className="scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 font-heading">
-                  Как формируется стоимость
+                  Методика расчёта стоимости работ
                 </h2>
                 <p className="text-foreground/80 mb-8">
-                  Стоимость работ по сертификации не является фиксированной и рассчитывается индивидуально для каждого проекта. Мы гарантируем полную прозрачность ценообразования.
+                  Методика расчета стоимости работ по сертификации и примерная стоимость работ Органа по сертификации продукции (ОСП) ООО «КАВКАЗ-ИНЖИНИРИНГ».
                 </p>
                 
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-4">Факторы, влияющие на стоимость:</h3>
-                    <ul className="space-y-3 text-foreground/70">
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-1" />
-                        <span>Тип и сложность продукции</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-1" />
-                        <span>Выбранная схема сертификации</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-1" />
-                        <span>Объем и сложность необходимых испытаний</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-1" />
-                        <span>Необходимость анализа состояния производства</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-1" />
-                        <span>Количество необходимых выездов экспертов</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="p-6 bg-card/50 rounded-xl border border-border">
-                    <h3 className="text-lg font-semibold text-foreground mb-4">Методика расчета:</h3>
-                    <div className="p-4 bg-background/50 rounded-lg mb-4 text-center">
-                      <span className="text-2xl font-bold text-accent">С = Сос + Си + Сап + Сд</span>
+                {/* Общие положения */}
+                <div className="mb-10 p-6 bg-card/30 rounded-xl border border-border">
+                  <h3 className="text-lg font-semibold text-foreground mb-4">Общие положения</h3>
+                  <div className="space-y-3 text-foreground/80 text-sm">
+                    <p>
+                      Все фактически проведенные ОСП ООО «КАВКАЗ-ИНЖИНИРИНГ» работы по сертификации, за исключением работ, финансирование которых в соответствии с законодательством осуществляется из средств государственного бюджета, оплачиваются за счет собственных средств предприятий, организаций, граждан, обратившихся с заявкой на проведение соответствующих работ, вне зависимости от принятых по их результатам решений.
+                    </p>
+                    <div className="flex items-center gap-2 p-3 bg-accent/10 rounded-lg">
+                      <Calculator className="w-5 h-5 text-accent shrink-0" />
+                      <span><strong>Уровень рентабельности</strong> работ по сертификации не должен превышать <strong className="text-accent">35%</strong>.</span>
                     </div>
-                    <ul className="space-y-2 text-foreground/70 text-sm">
-                      <li><strong className="text-foreground">Сос</strong> — работы Органа по сертификации</li>
-                      <li><strong className="text-foreground">Си</strong> — испытания в лаборатории</li>
-                      <li><strong className="text-foreground">Сап</strong> — анализ состояния производства</li>
-                      <li><strong className="text-foreground">Сд</strong> — прочие расходы</li>
-                    </ul>
+                    <p>
+                      Инспекционный контроль за сертифицированной продукцией оплачивается в размере фактических затрат, понесенных организациями, выполняющими соответствующие работы.
+                    </p>
+                    <p>
+                      Стоимость работ по сертификации <strong>не включает</strong> командировочные расходы и налог на добавленную стоимость. Их оплата проводится заявителем дополнительно.
+                    </p>
+                    <p>
+                      Средняя дневная ставка специалистов не должна превышать минимальной месячной заработной платы, установленной законодательством Российской Федерации.
+                    </p>
                   </div>
                 </div>
-                
-                <div className="mt-8 p-6 bg-accent/10 rounded-xl border border-accent/30">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Как узнать точную стоимость?</h3>
-                  <p className="text-foreground/80 mb-4">
+
+                {/* Основная формула */}
+                <div className="mb-10">
+                  <h3 className="text-lg font-semibold text-foreground mb-4">Суммарные затраты по подтверждению соответствия</h3>
+                  <div className="p-6 bg-accent/10 rounded-xl border border-accent/30 mb-6">
+                    <div className="text-center mb-6">
+                      <span className="text-2xl md:text-3xl font-bold text-accent font-mono">
+                        С = С<sub>ое</sub> + С<sub>об</sub> + С<sub>ип</sub> + С<sub>а</sub> + С<sub>ик</sub> × n + С<sub>рс</sub>
+                      </span>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-4 text-sm">
+                      <div className="space-y-2">
+                        <div className="flex items-start gap-2">
+                          <span className="font-bold text-accent min-w-[40px]">С</span>
+                          <span className="text-foreground/80">— общая стоимость услуг по подтверждению соответствия продукции, руб.</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="font-bold text-accent min-w-[40px]">С<sub>ое</sub></span>
+                          <span className="text-foreground/80">— стоимость работ, проводимых ОСП, руб.</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="font-bold text-accent min-w-[40px]">С<sub>об</sub></span>
+                          <span className="text-foreground/80">— стоимость образцов, отобранных для испытаний (разрушающихся), руб.</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="font-bold text-accent min-w-[40px]">С<sub>ип</sub></span>
+                          <span className="text-foreground/80">— стоимость испытаний в аккредитованной лаборатории, руб.</span>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-start gap-2">
+                          <span className="font-bold text-accent min-w-[40px]">С<sub>а</sub></span>
+                          <span className="text-foreground/80">— стоимость анализа состояния производства</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="font-bold text-accent min-w-[40px]">С<sub>ик</sub></span>
+                          <span className="text-foreground/80">— стоимость одной проверки в рамках инспекционного контроля, руб.</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="font-bold text-accent min-w-[40px]">n</span>
+                          <span className="text-foreground/80">— число проверок в течение срока действия сертификата</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="font-bold text-accent min-w-[40px]">С<sub>рс</sub></span>
+                          <span className="text-foreground/80">— расходы на упаковку, хранение, транспортировку образцов, руб.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-foreground/60 text-sm italic">
+                    В зависимости от конкретной ситуации в формулу включаются только элементы, соответствующие составу фактически проводимых работ.
+                  </p>
+                </div>
+
+                {/* Формула затрат ОСП */}
+                <div className="mb-10">
+                  <h3 className="text-lg font-semibold text-foreground mb-4">Затраты ОСП по подтверждению соответствия</h3>
+                  <div className="p-6 bg-card/30 rounded-xl border border-border mb-6">
+                    <div className="text-center mb-6">
+                      <span className="text-xl md:text-2xl font-bold text-foreground font-mono">
+                        С<sub>ое</sub> = t<sub>oci</sub> × Т × (1 + (К<sub>нз</sub> + К<sub>нр</sub>)/100) × (1 + Р/100)
+                      </span>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-4 text-sm">
+                      <div className="space-y-2">
+                        <div className="flex items-start gap-2">
+                          <span className="font-bold text-foreground min-w-[50px]">t<sub>oci</sub></span>
+                          <span className="text-foreground/80">— трудоемкость подтверждения соответствия по i-й схеме, чел.-дн.</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="font-bold text-foreground min-w-[50px]">Т</span>
+                          <span className="text-foreground/80">— дневная ставка эксперта, руб.</span>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-start gap-2">
+                          <span className="font-bold text-foreground min-w-[50px]">К<sub>нз</sub></span>
+                          <span className="text-foreground/80">— норматив начислений на заработную плату, %</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="font-bold text-foreground min-w-[50px]">К<sub>нр</sub></span>
+                          <span className="text-foreground/80">— коэффициент накладных расходов, %</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="font-bold text-foreground min-w-[50px]">Р</span>
+                          <span className="text-foreground/80">— уровень рентабельности, %</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Таблица нормативов трудоемкости */}
+                <div className="mb-10">
+                  <h3 className="text-lg font-semibold text-foreground mb-4">Предельные нормативы трудоёмкости работ</h3>
+                  <p className="text-foreground/70 text-sm mb-4">
+                    Предельные нормативы трудоемкости и состав работ, выполняемых ОСП при сертификации конкретной продукции, в зависимости от схемы сертификации:
+                  </p>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm border-collapse">
+                      <thead>
+                        <tr className="bg-accent/20">
+                          <th className="border border-border p-3 text-left text-foreground font-semibold">Наименование работ</th>
+                          <th className="border border-border p-3 text-center text-foreground font-semibold w-20">1с</th>
+                          <th className="border border-border p-3 text-center text-foreground font-semibold w-20">3с</th>
+                          <th className="border border-border p-3 text-center text-foreground font-semibold w-20">9с</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="bg-secondary/30">
+                          <td className="border border-border p-3 font-semibold text-foreground" colSpan={4}>
+                            1. Принятие решения по заявке на сертификацию
+                          </td>
+                        </tr>
+                        {[
+                          { name: "1.1. Прием, входной контроль и регистрация заявки", s1c: "0,5", s3c: "0,5", s9c: "0,5" },
+                          { name: "1.2. Рассмотрение документов, приложенных к заявке", s1c: "2,0", s3c: "2,0", s9c: "-" },
+                          { name: "1.3. Рассмотрение заявления-декларации и сопроводительных документов", s1c: "-", s3c: "-", s9c: "4,0" },
+                          { name: "1.4. Предварительное ознакомление с состоянием производства сертифицируемой продукции **", s1c: "-", s3c: "-", s9c: "-" },
+                          { name: "1.5. Выбор схемы и программы сертификации", s1c: "0,5", s3c: "0,5", s9c: "0,5" },
+                          { name: "1.6. Определение организаций-соисполнителей", s1c: "1,5", s3c: "1,5", s9c: "-" },
+                          { name: "1.7. Подготовка решения по заявке", s1c: "1,0", s3c: "1,0", s9c: "1,0" },
+                        ].map((row, index) => (
+                          <tr key={index} className="hover:bg-card/50">
+                            <td className="border border-border p-3 text-foreground/80">{row.name}</td>
+                            <td className="border border-border p-3 text-center text-foreground/80">{row.s1c}</td>
+                            <td className="border border-border p-3 text-center text-foreground/80">{row.s3c}</td>
+                            <td className="border border-border p-3 text-center text-foreground/80">{row.s9c}</td>
+                          </tr>
+                        ))}
+                        <tr className="bg-secondary/30">
+                          <td className="border border-border p-3 font-semibold text-foreground" colSpan={4}>
+                            2. Выполнение процедур сертификации
+                          </td>
+                        </tr>
+                        {[
+                          { name: "2.1. Отбор и идентификация образцов для проведения сертификационных испытаний", s1c: "3,0", s3c: "3,0", s9c: "-" },
+                          { name: "2.2. Анализ протоколов испытаний", s1c: "1,0", s3c: "1,0", s9c: "-" },
+                          { name: "2.3. Проверка производства сертифицируемой продукции", s1c: "-", s3c: "-", s9c: "-" },
+                          { name: "2.3.1. Анализ состояния производства **", s1c: "-", s3c: "-", s9c: "-" },
+                          { name: "2.3.2. Анализ результатов работ по сертификации производства или системы качества", s1c: "-", s3c: "-", s9c: "-" },
+                          { name: "2.4. Оценка соответствия продукции и подготовка решения о выдаче сертификата", s1c: "1,0", s3c: "1,0", s9c: "1,0" },
+                        ].map((row, index) => (
+                          <tr key={index} className="hover:bg-card/50">
+                            <td className="border border-border p-3 text-foreground/80">{row.name}</td>
+                            <td className="border border-border p-3 text-center text-foreground/80">{row.s1c}</td>
+                            <td className="border border-border p-3 text-center text-foreground/80">{row.s3c}</td>
+                            <td className="border border-border p-3 text-center text-foreground/80">{row.s9c}</td>
+                          </tr>
+                        ))}
+                        <tr className="bg-secondary/30">
+                          <td className="border border-border p-3 font-semibold text-foreground" colSpan={4}>
+                            3. Инспекционный контроль за сертифицированной продукцией ***
+                          </td>
+                        </tr>
+                        {[
+                          { name: "3.1. Выбор программы инспекционного контроля ***", s1c: "1,5", s3c: "1,5", s9c: "-" },
+                          { name: "3.2. Проведение одной проверки, включая анализ данных о сертифицированной продукции", s1c: "1,5", s3c: "1,5", s9c: "-" },
+                          { name: "3.3. Анализ состояния производства при инспекционном контроле ***", s1c: "1,5", s3c: "-", s9c: "-" },
+                          { name: "3.4. Разработка перечня корректирующих воздействий и сроков их реализации", s1c: "1,5", s3c: "1,5", s9c: "-" },
+                          { name: "3.5. Контроль за реализацией корректирующих мероприятий", s1c: "2,0", s3c: "2,0", s9c: "-" },
+                        ].map((row, index) => (
+                          <tr key={index} className="hover:bg-card/50">
+                            <td className="border border-border p-3 text-foreground/80">{row.name}</td>
+                            <td className="border border-border p-3 text-center text-foreground/80">{row.s1c}</td>
+                            <td className="border border-border p-3 text-center text-foreground/80">{row.s3c}</td>
+                            <td className="border border-border p-3 text-center text-foreground/80">{row.s9c}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                {/* Таблица групп сложности */}
+                <div className="mb-10">
+                  <h3 className="text-lg font-semibold text-foreground mb-4">Группы сложности производства</h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm border-collapse max-w-2xl">
+                      <thead>
+                        <tr className="bg-accent/20">
+                          <th className="border border-border p-3 text-center text-foreground font-semibold w-20">Группа</th>
+                          <th className="border border-border p-3 text-left text-foreground font-semibold">Среднее число технологических операций при изготовлении продукции</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {[
+                          { group: "1", operations: "от 1 до 3" },
+                          { group: "2", operations: "от 4 до 10" },
+                          { group: "3", operations: "от 11 до 20" },
+                          { group: "4", operations: "от 21 до 50" },
+                          { group: "5", operations: "от 51 до 200" },
+                          { group: "6", operations: "от 201 до 2000" },
+                          { group: "7", operations: "от 2001 до 5000" },
+                          { group: "8", operations: "свыше 5000" },
+                        ].map((row, index) => (
+                          <tr key={index} className="hover:bg-card/50">
+                            <td className="border border-border p-3 text-center font-bold text-accent">{row.group}</td>
+                            <td className="border border-border p-3 text-foreground/80">{row.operations}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                {/* Дополнительные положения */}
+                <div className="mb-10 space-y-3">
+                  <h3 className="text-lg font-semibold text-foreground mb-4">Дополнительные положения</h3>
+                  {[
+                    "Стоимость испытаний для сертификации продукции калькулируется аккредитованной испытательной лабораторией на основе самостоятельно установленных нормативов материальных и трудовых затрат в действующих ценах.",
+                    "Стоимость образцов, взятых у заявителя (изготовителя) для испытаний, определяется по их фактической себестоимости.",
+                    "Оплата образцов, отобранных в торговле, проводится в соответствии с их розничной ценой на основании документов, удостоверяющих факт покупки.",
+                    "Расходы по отбору и доставке образцов включают фактически произведенные затраты на транспортировку, погрузочно-разгрузочные работы, хранение и утилизацию.",
+                    "Оплата испытаний проводится по тарифам соответствующей аккредитованной испытательной лаборатории на основе возмещения издержек.",
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-3 p-3 bg-card/30 rounded-lg border border-border/50">
+                      <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <span className="text-foreground/80 text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Примечания */}
+                <div className="mb-10 p-4 bg-secondary/30 rounded-xl border border-border text-sm text-foreground/70 space-y-2">
+                  <p><strong>*</strong> Схемы сертификации даны в соответствии с Приложением №1 ДП-02.09, а также ГОСТ Р 53603-2020. Приведенный состав работ является типовым.</p>
+                  <p><strong>**</strong> Устанавливается согласно положениям Приложения Б Постановления Госстандарта России от 23.08.1999 №44.</p>
+                  <p><strong>***</strong> Проводится ОСП, если это предусмотрено схемой сертификации.</p>
+                </div>
+
+                {/* Примерная стоимость */}
+                <div className="p-6 bg-accent/10 rounded-xl border border-accent/30">
+                  <h3 className="text-xl font-semibold text-foreground mb-4">Примерная стоимость работ</h3>
+                  <div className="grid md:grid-cols-2 gap-6 mb-6">
+                    <div className="p-4 bg-background/50 rounded-lg text-center">
+                      <p className="text-foreground/60 text-sm mb-2">Сертификация</p>
+                      <p className="text-3xl font-bold text-accent">от 50 000 ₽</p>
+                    </div>
+                    <div className="p-4 bg-background/50 rounded-lg text-center">
+                      <p className="text-foreground/60 text-sm mb-2">Инспекционный контроль</p>
+                      <p className="text-3xl font-bold text-accent">от 50 000 ₽</p>
+                    </div>
+                  </div>
+                  <p className="text-foreground/70 text-sm mb-6">
+                    Не включая стоимость внесения сведений в реестр Росаккредитации (оплачивается заявителем и ОСП дополнительно, согласно положениям приказа Минэкономразвития России от 14.11.2024 №714).
+                  </p>
+                  
+                  <h4 className="font-semibold text-foreground mb-3">Как узнать точную стоимость?</h4>
+                  <p className="text-foreground/80 text-sm mb-4">
                     Для получения детального коммерческого предложения направьте нам заполненную заявку с комплектом технической документации. Мы подготовим расчет в течение 2-3 рабочих дней.
                   </p>
                   <div className="flex flex-wrap gap-4">
