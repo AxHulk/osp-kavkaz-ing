@@ -895,56 +895,76 @@ const Accreditation = () => {
               {/* 5. Заявка на сертификацию */}
               <section id="application" className="scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 font-heading">
-                  Как подать заявку
+                  Форма заявки на обязательную сертификацию продукции
                 </h2>
-                <p className="text-foreground/80 mb-8">
-                  Процесс сертификации начинается с подачи заявки. Мы постарались сделать этот шаг максимально простым и понятным.
-                </p>
                 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="p-6 bg-card/30 rounded-xl border border-border">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm">1</span>
-                      <h3 className="text-lg font-semibold text-foreground">Подготовка документов</h3>
-                    </div>
-                    <p className="text-foreground/70 text-sm mb-4">Перед подачей заявки подготовьте:</p>
-                    <ul className="space-y-2 text-foreground/70 text-sm">
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                        <span>Заполненная форма заявки</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                        <span>Регистрационные документы (ИНН, ОГРН)</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <ChevronRight className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                        <span>Техническая документация на продукцию</span>
-                      </li>
-                    </ul>
-                  </div>
+                <div className="p-6 bg-card/30 rounded-xl border border-border mb-8">
+                  <p className="text-foreground/80 mb-6 leading-relaxed">
+                    Для проведения обязательной оценки (подтверждения) соответствия в форме обязательной сертификации продукции согласно области аккредитации ОСП ООО «КАВКАЗ-ИНЖИНИРИНГ», заявитель (изготовитель; уполномоченное изготовителем лицо — если продукция изготовлена за пределами Российской Федерации; продавец (импортер)) оформляет рекомендованную форму заявки и направляет заявку, а также необходимый комплект документов согласно схеме сертификации и основополагающим документам, устанавливающим требования к сертифицируемой продукции.
+                  </p>
                   
-                  <div className="p-6 bg-card/30 rounded-xl border border-border">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm">2</span>
-                      <h3 className="text-lg font-semibold text-foreground">Направление заявки</h3>
-                    </div>
-                    <p className="text-foreground/70 text-sm mb-4">
-                      Направьте скан-копии документов на нашу электронную почту с темой письма «Заявка на сертификацию».
+                  <div className="p-4 bg-accent/10 rounded-lg border border-accent/20 mb-6">
+                    <p className="text-foreground/80 text-sm">
+                      <strong className="text-foreground">Нормативная база:</strong> В зависимости от конкретной продукции согласно Постановлению Правительства России от 21.12.2021 №2425 (с изменениями) это: <span className="text-accent">ГОСТ Р 71233–2024</span>, <span className="text-accent">ГОСТ Р 71234–2024</span>, <span className="text-accent">ГОСТ Р 71235–2024</span>.
                     </p>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-semibold text-foreground mb-4 font-heading">
+                  Способы подачи заявки
+                </h3>
+                
+                <div className="grid md:grid-cols-3 gap-4 mb-8">
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                      <Mail className="w-5 h-5 text-accent" />
+                    </div>
+                    <h4 className="text-foreground font-semibold mb-2">По электронной почте</h4>
                     <a 
                       href="mailto:osp@kavkaz-ing.ru?subject=Заявка на сертификацию"
-                      className="inline-flex items-center gap-2 text-accent hover:underline text-sm"
+                      className="text-accent hover:underline text-sm"
                     >
-                      <Mail className="w-4 h-4" />
                       osp@kavkaz-ing.ru
                     </a>
                   </div>
+                  
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                      <FileText className="w-5 h-5 text-accent" />
+                    </div>
+                    <h4 className="text-foreground font-semibold mb-2">По почте</h4>
+                    <p className="text-foreground/70 text-sm">
+                      123112, РОССИЯ, г. Москва, вн.тер.г. муниципальный округ Пресненский, ул. Тестовская, д.10, оф.509
+                    </p>
+                  </div>
+                  
+                  <div className="p-5 bg-card/30 rounded-xl border border-border">
+                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                      <User className="w-5 h-5 text-accent" />
+                    </div>
+                    <h4 className="text-foreground font-semibold mb-2">При личном приеме</h4>
+                    <p className="text-foreground/70 text-sm">
+                      123112, РОССИЯ, г. Москва, вн.тер.г. муниципальный округ Пресненский, ул. Тестовская, д.10, оф.509
+                    </p>
+                  </div>
                 </div>
-                
-                <p className="mt-6 p-4 bg-accent/10 rounded-lg text-foreground/80 text-sm border border-accent/20">
-                  <strong>Форма заявки:</strong> На данный момент форма заявки предоставляется по запросу. Свяжитесь с нами по электронной почте или телефону, и мы оперативно вышлем вам необходимый бланк.
-                </p>
+
+                <div className="p-6 bg-accent/10 rounded-xl border border-accent/30">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                      <h4 className="text-foreground font-semibold mb-1">Скачать форму заявки</h4>
+                      <p className="text-foreground/70 text-sm">Форма заявки на обязательную сертификацию продукции (формат .docx)</p>
+                    </div>
+                    <a
+                      href="/documents/Заявка_на_обяз_сертиф_продукции.docx"
+                      download
+                      className="inline-flex items-center gap-2 px-5 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-colors whitespace-nowrap"
+                    >
+                      <FileText className="w-4 h-4" />
+                      Скачать заявку
+                    </a>
+                  </div>
+                </div>
               </section>
 
               {/* 6. Порядок работы ОС */}
