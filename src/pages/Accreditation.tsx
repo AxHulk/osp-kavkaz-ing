@@ -13,7 +13,11 @@ import {
   Calculator,
   ChevronRight,
   Mail,
-  Phone
+  Phone,
+  User,
+  Shield,
+  GraduationCap,
+  Briefcase
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
