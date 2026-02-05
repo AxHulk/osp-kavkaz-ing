@@ -92,7 +92,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-10 pt-8 text-center">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} ООО «Кавказ Инжиниринг». Все права защищены.
+            © {new Date().getFullYear()} ООО «КАВКАЗ-ИНЖИНИРИНГ». Все права защищены.
           </p>
         </div>
       </div>
