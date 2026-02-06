@@ -303,6 +303,7 @@ const Accreditation = () => {
                       </div>
                       <h5 className="font-medium text-foreground/80 text-xs">Отдел по работе с клиентами</h5>
                     </div>
+                    <div className="bg-secondary/50 border border-border/50 rounded-lg p-3 text-center">
                       <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center mx-auto mb-2">
                         <Calculator className="w-4 h-4 text-foreground/60" />
                       </div>
