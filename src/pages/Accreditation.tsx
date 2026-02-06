@@ -1752,11 +1752,11 @@ const Accreditation = () => {
                       osp@kavkaz-ing.ru
                     </a>
                     <a 
-                      href="tel:+79187846121"
+                      href="tel:+74959844315"
                       className="inline-flex items-center gap-2 px-4 py-2 bg-card border border-border text-foreground rounded-lg hover:bg-card/80 transition-colors"
                     >
                       <Phone className="w-4 h-4" />
-                      +7 (918) 784-61-21
+                      8 (495) 984-43-15
                     </a>
                   </div>
                 </div>
