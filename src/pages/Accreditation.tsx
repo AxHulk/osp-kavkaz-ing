@@ -17,7 +17,8 @@ import {
   User,
   Shield,
   GraduationCap,
-  Briefcase
+  Briefcase,
+  Headphones
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
