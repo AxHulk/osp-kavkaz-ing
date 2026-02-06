@@ -1445,20 +1445,7 @@ const Accreditation = () => {
                   Точность и объективность — ключевые требования к испытаниям. Поэтому мы доверяем проверку продукции только аккредитованным и независимым испытательным центрам, имеющим безупречную репутацию и современное оборудование.
                 </p>
                 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="p-6 bg-card/30 rounded-xl border border-border">
-                    <div className="flex items-center gap-3 mb-4">
-                      <FlaskConical className="w-8 h-8 text-accent" />
-                      <div>
-                        <h3 className="font-semibold text-foreground">Испытательный центр АО «ВНИКТИ»</h3>
-                        <span className="text-accent text-sm">RA.RU.10ЖД04 от 17.03.2015 г.</span>
-                      </div>
-                    </div>
-                    <p className="text-foreground/70 text-sm">
-                      Аккредитованный испытательный центр с многолетним опытом в области испытаний железнодорожной и канатной техники.
-                    </p>
-                  </div>
-                  
+                <div className="grid md:grid-cols-1 gap-6 max-w-xl">
                   <div className="p-6 bg-card/30 rounded-xl border border-border">
                     <div className="flex items-center gap-3 mb-4">
                       <FlaskConical className="w-8 h-8 text-accent" />
