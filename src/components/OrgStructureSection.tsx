@@ -1,4 +1,4 @@
-import { User, Users, Shield, Scale, ClipboardCheck, Briefcase, Calculator, Settings, GraduationCap } from "lucide-react";
+import { User, Users, Shield, Scale, ClipboardCheck, Briefcase, Calculator, Settings, GraduationCap, Headphones } from "lucide-react";
 
 const OrgStructureSection = () => {
   return (
