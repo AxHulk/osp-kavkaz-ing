@@ -29,13 +29,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/#expertise" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-                  Экспертиза
-                </a>
-              </li>
-              <li>
-                <a href="/#certification" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-                  Сертификация
+                <a href="/accreditation" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+                  Аккредитация
                 </a>
               </li>
               <li>
