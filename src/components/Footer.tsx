@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -8,7 +9,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Company */}
           <div className="lg:col-span-1">
-            <img src={logo} alt="КАВКАЗ-ИНЖИНИРИНГ" className="h-10 w-auto mb-4 brightness-0 invert" />
+            <Link to="/">
+              <img src={logo} alt="КАВКАЗ-ИНЖИНИРИНГ" className="h-10 w-auto mb-4 brightness-0 invert hover:opacity-80 transition-opacity" />
+            </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Орган по сертификации пассажирских подвесных канатных дорог
             </p>
@@ -26,13 +29,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/#expertise" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-                  Экспертиза
-                </a>
-              </li>
-              <li>
-                <a href="/#certification" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-                  Сертификация
+                <a href="/accreditation" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+                  Аккредитация
                 </a>
               </li>
               <li>
