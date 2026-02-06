@@ -175,7 +175,7 @@ const ContactsSection = () => {
             {/* Map placeholder */}
             <div className="rounded-xl overflow-hidden border border-border h-48">
               <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=37.5414%2C55.7522&z=17&pt=37.5414,55.7522,pm2rdm"
+                src="https://yandex.ru/map-widget/v1/?ll=37.532646%2C55.751801&z=17&pt=37.532646,55.751801,pm2rdm"
                 width="100%"
                 height="100%"
                 style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
