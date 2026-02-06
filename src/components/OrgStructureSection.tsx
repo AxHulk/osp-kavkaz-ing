@@ -139,7 +139,15 @@ const OrgStructureSection = () => {
             <h3 className="text-center text-foreground/60 text-sm font-medium mb-6 uppercase tracking-wide">
               Подразделения Общества
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              {/* Client Relations */}
+              <div className="bg-secondary/50 border border-border/50 rounded-lg p-4 text-center">
+                <div className="w-10 h-10 bg-muted rounded-full flex items-center justify-center mx-auto mb-2">
+                  <Headphones className="w-5 h-5 text-foreground/60" />
+                </div>
+                <h5 className="font-medium text-foreground/80 text-sm">Отдел по работе с клиентами</h5>
+              </div>
+
               {/* Accounting */}
               <div className="bg-secondary/50 border border-border/50 rounded-lg p-4 text-center">
                 <div className="w-10 h-10 bg-muted rounded-full flex items-center justify-center mx-auto mb-2">
