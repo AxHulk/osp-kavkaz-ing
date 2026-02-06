@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Подтверждённая экспертиза — КАВКАЗ-ИНЖИНИРИНГ</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .eki-section {
+    background-color: #132326;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    padding: 80px 24px;
+  }
+  .eki-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .eki-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .eki-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #ffffff;
+  }
+  .eki-subtitle {
+    color: rgba(255,255,255,0.6);
+    font-size: 1.125rem;
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .eki-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 768px) {
+    .eki-grid { grid-template-columns: 1fr; }
+    .eki-title { font-size: 1.75rem; }
+    .eki-card { height: 280px !important; }
+  }
+  .eki-card {
+    position: relative;
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .eki-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+  .eki-card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+  }
+  .eki-card:hover .eki-card-img {
+    transform: scale(1.1);
+  }
+  .eki-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(19,35,38,0.95) 0%, rgba(19,35,38,0.4) 50%, rgba(19,35,38,0.1) 100%);
+    transition: opacity 0.3s;
+  }
+  .eki-card:hover .eki-card-overlay {
+    opacity: 0.95;
+  }
+  .eki-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255,255,255,0.9);
+    color: #132326;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 999px;
+    z-index: 2;
+  }
+  .eki-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 32px;
+    z-index: 2;
+  }
+  .eki-card-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #ffffff;
+  }
+  .eki-card-desc {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 400px;
+  }
+  .eki-arrow {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 2;
+  }
+  .eki-card:hover .eki-arrow { opacity: 1; }
+  .eki-arrow svg { width: 20px; height: 20px; color: #fff; }
+
+  /* Modal */
+  .eki-modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    animation: ekiFadeIn 0.2s ease;
+  }
+  .eki-modal-backdrop.active { display: flex; }
+  @keyframes ekiFadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes ekiSlideUp { from { opacity: 0; transform: translateY(20px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
+  .eki-modal {
+    background: #1a2e32;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: ekiSlideUp 0.3s ease;
+    color: #ffffff;
+  }
+  .eki-modal::-webkit-scrollbar { width: 6px; }
+  .eki-modal::-webkit-scrollbar-track { background: transparent; }
+  .eki-modal::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 3px; }
+
+  .eki-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(26,46,50,0.8);
+    backdrop-filter: blur(8px);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    color: #fff;
+  }
+  .eki-modal-close:hover { background: rgba(26,46,50,1); }
+  .eki-modal-close svg { width: 20px; height: 20px; }
+
+  .eki-modal-hero {
+    position: relative;
+    width: 100%;
+    height: 280px;
+  }
+  @media (min-width: 768px) { .eki-modal-hero { height: 320px; } }
+  .eki-modal-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .eki-modal-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #1a2e32 0%, rgba(26,46,50,0.5) 50%, transparent 100%);
+  }
+  .eki-modal-hero-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 32px;
+  }
+  .eki-modal-hero-title h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  @media (min-width: 768px) { .eki-modal-hero-title h2 { font-size: 1.875rem; } }
+
+  .eki-modal-body {
+    padding: 24px 32px 40px;
+  }
+  .eki-modal-body .eki-modal-intro {
+    color: rgba(255,255,255,0.6);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  @media (min-width: 768px) { .eki-modal-body .eki-modal-intro { font-size: 1.125rem; } }
+  .eki-modal-section { margin-bottom: 24px; }
+  .eki-modal-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #ffffff;
+  }
+  @media (min-width: 768px) { .eki-modal-section h3 { font-size: 1.5rem; } }
+  .eki-modal-section p {
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    white-space: pre-line;
+  }
+  .eki-modal-badge-inprogress {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #ffffff;
+    color: #132326;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 999px;
+    z-index: 2;
+  }
+</style>
+</head>
+<body>
+
+<section class="eki-section">
+  <div class="eki-container">
+    <div class="eki-header">
+      <h2 class="eki-title">Подтверждённая экспертиза</h2>
+      <p class="eki-subtitle">Часть крупного инженерного центра с доказанным опытом в реализации сложных проектов</p>
+    </div>
+    <div class="eki-grid" id="ekiGrid"></div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="eki-modal-backdrop" id="ekiModal">
+  <div class="eki-modal" id="ekiModalContent">
+    <button class="eki-modal-close" onclick="ekiCloseModal()" aria-label="Закрыть">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div id="ekiModalInner"></div>
+  </div>
+</div>
+
+<script>
+const ekiProjects = [
+  {
+    name: "Эльбрус",
+    description: "Система искусственного снегообразования и Альп-городок",
+    image: "https://osp-kavkaz-ing.lovable.app/assets/elbrus-project-CpT3dvZb.jpg",
+    detailImage: "https://osp-kavkaz-ing.lovable.app/assets/project-elbrus-detail-BO7yK7Jv.png",
+    inProgress: false,
+    details: {
+      title: "Эльбрус: Новая высота комфорта и снега",
+      subtitle: "Представьте себе идеальное утро на Эльбрусе. Солнце заливает белоснежные склоны, воздух кристально чист, а под вашими лыжами — безупречный вельветовый снег. Раньше такая картина зависела от капризов природы. Сегодня — это гарантированная реальность, созданная инженерной мыслью и смелой мечтой.",
+      sections: [
+        { heading: "Снег, который всегда есть: Система искусственного снегообразования", content: "Мы бросили вызов самой высокой вершине Европы и создали то, что казалось невозможным — самую высокогорную в Европе систему искусственного снегообразования. Это не просто трубы и пушки. Это сложнейший организм, который вдыхает жизнь в трассы, когда природа берет паузу.\n\nНаша система искусственного снегообразования — это гарантия вашего идеального катания с ноября по май. Это километры трасс, покрытых идеальным снегом, который не тает под ярким горным солнцем. Мы не ждем милости от природы — мы создаем ее для вас, превращая каждый день в лучший день для катания." },
+        { heading: "Альп-городок: Ваш уютный дом среди вершин", content: "Но что такое идеальный снег без места, где можно отдохнуть душой и телом? Мы создали не просто отель, а настоящий Альп-городок — островок комфорта и тепла в сердце величественных гор.\n\nЭто место, где после дня, полного адреналина и скорости, вы возвращаетесь в атмосферу уюта. Где можно выпить чашку горячего чая, глядя на заснеженные пики из панорамного окна, поделиться впечатлениями с друзьями и набраться сил для нового дня. Альп-городок — это не просто место для ночлега. Это ваша личная база на Эльбрусе, отправная точка для приключений и финальный аккорд идеального дня.\n\nВместе — система снегообразования и Альп-городок — они создают новую реальность. Реальность, в которой Эльбрус стал ближе, доступнее и комфортнее, чем когда-либо. Добро пожаловать на новую высоту!" }
+      ]
+    }
+  },
+  {
+    name: "Ведучи",
+    description: "Техническое сопровождение создания Системы искусственного снегообразования",
+    image: "https://osp-kavkaz-ing.lovable.app/assets/veduchi-project-CmLPCdNc.jpg",
+    detailImage: "https://osp-kavkaz-ing.lovable.app/assets/project-veduchi-detail-D24U_VyO.png",
+    inProgress: false,
+    details: {
+      title: "Ведучи: Инженерная точность за кулисами идеального снега",
+      subtitle: "Создать систему искусственного снегообразования — это само по себе вызов. Но обеспечить её безупречную работу на одном из самых молодых и амбициозных курортов Кавказа, в Ведучи, — это задача совершенно иного уровня.",
+      sections: [
+        { heading: "Не просто построить, а заставить работать как часы", content: "Наш опыт в Ведучи — это история о том, что происходит после того, как основной проект завершен. Мы были не просто строителями, а техническим дирижером сложнейшего оркестра. Нашей задачей было взять передовые европейские технологии и заставить их работать в уникальных условиях чеченских гор.\n\nМы осуществляли полный технический надзор: от проверки каждого чертежа и каждой спецификации до контроля за монтажом и пусконаладочными работами." },
+        { heading: "Интеллект, а не грубая сила", content: "Техническое сопровождение — это интеллектуальная работа. Это способность предвидеть проблемы до их появления, находить нестандартные решения и говорить на одном языке с проектировщиками, поставщиками и монтажниками.\n\nМы не просто следили за процессом — мы управляли им, оптимизировали его и доводили до совершенства. Наш опыт в Ведучи — это доказательство того, что «КАВКАЗ-ИНЖИНИРИНГ» не просто реализует проекты. Мы обеспечиваем их надежность, эффективность и долговечность на годы вперед." }
+      ]
+    }
+  },
+  {
+    name: "Мамисон",
+    description: "Инженерное сопровождение строительства гаража ратраков и системы искусственного снегообразования",
+    image: "https://osp-kavkaz-ing.lovable.app/assets/mamison-project-Cj_h3Z3k.avif",
+    detailImage: "https://osp-kavkaz-ing.lovable.app/assets/project-mamison-detail-DlVlGdly.png",
+    inProgress: false,
+    details: {
+      title: "Мамисон: За кулисами рождения новой звезды",
+      subtitle: "Когда в горах Осетии рождается новая легенда — курорт «Мамисон», — за грандиозным фасадом кипит сложнейшая инженерная работа.",
+      sections: [
+        { heading: "Два элемента — одна система", content: "Представьте себе идеальный горнолыжный курорт. Его основа — это гарантированный снег и идеально подготовленные трассы. Система искусственного снегообразования — это «легкие», которые обеспечивают курорт снегом в любую погоду. Гараж ратраков — это «сердце», дом для мощных машин, которые каждую ночь превращают этот снег в безупречный «вельвет».\n\nНаша роль в Мамисоне — быть тем самым «инженерным мозгом», который связал эти два элемента в единую, слаженно работающую систему." },
+        { heading: "Инженерное сопровождение: Гарантия надежности", content: "Наше участие — это гарантия того, что каждый кубометр бетона в фундаменте гаража и каждый стык трубы в системе снегообразования соответствуют проекту и высочайшим стандартам.\n\n• Для гаража ратраков: Мы проконтролировали, чтобы это было не просто здание, а высокотехнологичная база, способная выдерживать суровые горные условия.\n\n• Для системы искусственного снегообразования: Мы осуществляли надзор за монтажом сложнейшей системы, гарантируя её эффективность и долговечность." }
+      ]
+    }
+  },
+  {
+    name: "Приют-11",
+    description: "Участие в проекте федерального значения по восстановлению легендарной высокогорной гостиницы",
+    image: "https://osp-kavkaz-ing.lovable.app/assets/priyut11-project-DfxOCG6V.webp",
+    detailImage: "https://osp-kavkaz-ing.lovable.app/assets/project-priyut11-detail-CT7hPl0B.png",
+    inProgress: true,
+    details: {
+      title: "Приют-11: Возрождение легенды на вершине Европы",
+      subtitle: "Есть имена, которые для каждого альпиниста звучат как музыка. «Приют-11» — одно из них. Легендарная высокогорная гостиница на склонах Эльбруса, ставшая домом для поколений восходителей.",
+      sections: [
+        { heading: "Миссия на высоте 4100 метров", content: "Восстановление «Приюта-11» — это не просто стройка. Это проект федерального значения, миссия по возвращению истории. Работать на высоте более 4100 метров, в суровых условиях, где каждый шаг требует предельной концентрации, — это вызов, который могут принять лишь немногие.\n\n«КАВКАЗ-ИНЖИНИРИНГ» принимает непосредственное участие в этом историческом проекте, предоставляя свою ключевую компетенцию — инженерное сопровождение." },
+        { heading: "Инженерный интеллект на службе истории", content: "Мы осуществляем строгий технический надзор, чтобы гарантировать, что новый «Приют-11» будет не только данью уважения прошлому, но и самым надежным, теплым и современным высокогорным приютом в Европе.\n\nДля нас это больше, чем проект. Это возможность прикоснуться к истории и стать частью ее будущего. Мы строим не просто гостиницу. Мы возрождаем легенду." }
+      ]
+    }
+  }
+];
+
+// Render cards
+const grid = document.getElementById('ekiGrid');
+ekiProjects.forEach((p, i) => {
+  const card = document.createElement('div');
+  card.className = 'eki-card';
+  card.onclick = () => ekiOpenModal(i);
+  card.innerHTML = `
+    <img class="eki-card-img" src="${p.image}" alt="${p.name}" loading="lazy">
+    <div class="eki-card-overlay"></div>
+    ${p.inProgress ? '<div class="eki-badge">В работе</div>' : ''}
+    <div class="eki-card-content">
+      <h3 class="eki-card-name">${p.name}</h3>
+      <p class="eki-card-desc">${p.description}</p>
+    </div>
+    <div class="eki-arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+    </div>
+  `;
+  grid.appendChild(card);
+});
+
+function ekiOpenModal(idx) {
+  const p = ekiProjects[idx];
+  const inner = document.getElementById('ekiModalInner');
+  let sectionsHtml = p.details.sections.map(s => `
+    <div class="eki-modal-section">
+      <h3>${s.heading}</h3>
+      <p>${s.content}</p>
+    </div>
+  `).join('');
+
+  inner.innerHTML = `
+    <div class="eki-modal-hero">
+      <img src="${p.detailImage}" alt="${p.name}">
+      <div class="eki-modal-hero-overlay"></div>
+      ${p.inProgress ? '<div class="eki-modal-badge-inprogress">В работе</div>' : ''}
+      <div class="eki-modal-hero-title"><h2>${p.details.title}</h2></div>
+    </div>
+    <div class="eki-modal-body">
+      <p class="eki-modal-intro">${p.details.subtitle}</p>
+      ${sectionsHtml}
+    </div>
+  `;
+  document.getElementById('ekiModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function ekiCloseModal() {
+  document.getElementById('ekiModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('ekiModal').addEventListener('click', function(e) {
+  if (e.target === this) ekiCloseModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') ekiCloseModal();
+});
+</script>
+
+</body>
+</html>
