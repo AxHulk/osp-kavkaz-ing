@@ -359,7 +359,7 @@ const Accreditation = () => {
                   Наша команда — это аттестованные эксперты с многолетним инженерным и практическим опытом в профильных отраслях.
                 </p>
                 
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-2 gap-6">
                   {teamMembers.map((member, index) => (
                     <div key={index} className="p-6 bg-card/30 rounded-xl border border-border text-center">
                       <div className="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
