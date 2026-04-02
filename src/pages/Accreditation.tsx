@@ -1499,69 +1499,77 @@ const Accreditation = () => {
                       <thead>
                         <tr className="bg-accent/20">
                           <th className="border border-border p-3 text-left text-foreground font-semibold">Наименование работ</th>
-                          <th className="border border-border p-3 text-center text-foreground font-semibold w-20">1с</th>
-                          <th className="border border-border p-3 text-center text-foreground font-semibold w-20">3с</th>
-                          <th className="border border-border p-3 text-center text-foreground font-semibold w-20">9с</th>
+                          <th className="border border-border p-3 text-center text-foreground font-semibold w-16">1с</th>
+                          <th className="border border-border p-3 text-center text-foreground font-semibold w-16">3с</th>
+                          <th className="border border-border p-3 text-center text-foreground font-semibold w-16">7с</th>
+                          <th className="border border-border p-3 text-center text-foreground font-semibold w-16">9с</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr className="bg-secondary/30">
-                          <td className="border border-border p-3 font-semibold text-foreground" colSpan={4}>
+                          <td className="border border-border p-3 font-semibold text-foreground" colSpan={5}>
                             1. Принятие решения по заявке на сертификацию
                           </td>
                         </tr>
+                        <tr className="bg-secondary/20">
+                          <td className="border border-border p-3 text-foreground/70 italic" colSpan={1}></td>
+                          <td className="border border-border p-3 text-center text-foreground/70 italic" colSpan={4}>Не свыше</td>
+                        </tr>
                         {[
-                          { name: "1.1. Прием, входной контроль и регистрация заявки", s1c: "0,5", s3c: "0,5", s9c: "0,5" },
-                          { name: "1.2. Рассмотрение документов, приложенных к заявке", s1c: "2,0", s3c: "2,0", s9c: "-" },
-                          { name: "1.3. Рассмотрение заявления-декларации и сопроводительных документов", s1c: "-", s3c: "-", s9c: "4,0" },
-                          { name: "1.4. Предварительное ознакомление с состоянием производства сертифицируемой продукции **", s1c: "-", s3c: "-", s9c: "-" },
-                          { name: "1.5. Выбор схемы и программы сертификации", s1c: "0,5", s3c: "0,5", s9c: "0,5" },
-                          { name: "1.6. Определение организаций-соисполнителей", s1c: "1,5", s3c: "1,5", s9c: "-" },
-                          { name: "1.7. Подготовка решения по заявке", s1c: "1,0", s3c: "1,0", s9c: "1,0" },
+                          { name: "1.1. Прием, входной контроль и регистрация заявки", s1c: "0,5", s3c: "0,5", s7c: "0,5", s9c: "0,5" },
+                          { name: "1.2. Рассмотрение документов, приложенных к заявке", s1c: "2,0", s3c: "2,0", s7c: "2,0", s9c: "2,0" },
+                          { name: "1.3. Рассмотрение заявления-декларации и сопроводительных документов", s1c: "-", s3c: "-", s7c: "-", s9c: "-" },
+                          { name: "1.4. Предварительное ознакомление с состоянием производства сертифицируемой продукции **", s1c: "-", s3c: "-", s7c: "-", s9c: "-" },
+                          { name: "1.5. Выбор схемы и программы сертификации", s1c: "0,5", s3c: "0,5", s7c: "0,5", s9c: "0,5" },
+                          { name: "1.6. Определение организаций-соисполнителей", s1c: "1,5", s3c: "1,5", s7c: "1,5", s9c: "-" },
+                          { name: "1.7. Подготовка решения по заявке", s1c: "1,0", s3c: "1,0", s7c: "1,0", s9c: "1,0" },
                         ].map((row, index) => (
                           <tr key={index} className="hover:bg-card/50">
                             <td className="border border-border p-3 text-foreground/80">{row.name}</td>
                             <td className="border border-border p-3 text-center text-foreground/80">{row.s1c}</td>
                             <td className="border border-border p-3 text-center text-foreground/80">{row.s3c}</td>
+                            <td className="border border-border p-3 text-center text-foreground/80">{row.s7c}</td>
                             <td className="border border-border p-3 text-center text-foreground/80">{row.s9c}</td>
                           </tr>
                         ))}
                         <tr className="bg-secondary/30">
-                          <td className="border border-border p-3 font-semibold text-foreground" colSpan={4}>
+                          <td className="border border-border p-3 font-semibold text-foreground" colSpan={5}>
                             2. Выполнение процедур сертификации
                           </td>
                         </tr>
                         {[
-                          { name: "2.1. Отбор и идентификация образцов для проведения сертификационных испытаний", s1c: "3,0", s3c: "3,0", s9c: "-" },
-                          { name: "2.2. Анализ протоколов испытаний", s1c: "1,0", s3c: "1,0", s9c: "-" },
-                          { name: "2.3. Проверка производства сертифицируемой продукции", s1c: "-", s3c: "-", s9c: "-" },
-                          { name: "2.3.1. Анализ состояния производства **", s1c: "-", s3c: "-", s9c: "-" },
-                          { name: "2.3.2. Анализ результатов работ по сертификации производства или системы качества", s1c: "-", s3c: "-", s9c: "-" },
-                          { name: "2.4. Оценка соответствия продукции и подготовка решения о выдаче сертификата", s1c: "1,0", s3c: "1,0", s9c: "1,0" },
+                          { name: "2.1. Отбор и идентификация образцов для проведения сертификационных испытаний", s1c: "3,0", s3c: "3,0", s7c: "3,0", s9c: "-" },
+                          { name: "2.2. Анализ каждого протокола испытаний", s1c: "1,0", s3c: "1,0", s7c: "1,0", s9c: "-" },
+                          { name: "2.3. Проверка производства сертифицируемой продукции", s1c: "", s3c: "", s7c: "", s9c: "" },
+                          { name: "2.3.1. Анализ состояния производства **", s1c: "-", s3c: "-", s7c: "-", s9c: "-" },
+                          { name: "2.3.2. Анализ результатов работ по сертификации производства или системы качества", s1c: "-", s3c: "-", s7c: "-", s9c: "-" },
+                          { name: "2.4. Оценка соответствия продукции установленным требованиям и подготовка решения о возможности выдачи сертификата соответствия", s1c: "1,0", s3c: "1,0", s7c: "1,0", s9c: "1,0" },
                         ].map((row, index) => (
                           <tr key={index} className="hover:bg-card/50">
                             <td className="border border-border p-3 text-foreground/80">{row.name}</td>
                             <td className="border border-border p-3 text-center text-foreground/80">{row.s1c}</td>
                             <td className="border border-border p-3 text-center text-foreground/80">{row.s3c}</td>
+                            <td className="border border-border p-3 text-center text-foreground/80">{row.s7c}</td>
                             <td className="border border-border p-3 text-center text-foreground/80">{row.s9c}</td>
                           </tr>
                         ))}
                         <tr className="bg-secondary/30">
-                          <td className="border border-border p-3 font-semibold text-foreground" colSpan={4}>
-                            3. Инспекционный контроль за сертифицированной продукцией ***
+                          <td className="border border-border p-3 font-semibold text-foreground" colSpan={5}>
+                            3. Инспекционный контроль за сертифицированной продукцией
                           </td>
                         </tr>
                         {[
-                          { name: "3.1. Выбор программы инспекционного контроля ***", s1c: "1,5", s3c: "1,5", s9c: "-" },
-                          { name: "3.2. Проведение одной проверки, включая анализ данных о сертифицированной продукции", s1c: "1,5", s3c: "1,5", s9c: "-" },
-                          { name: "3.3. Анализ состояния производства при инспекционном контроле ***", s1c: "1,5", s3c: "-", s9c: "-" },
-                          { name: "3.4. Разработка перечня корректирующих воздействий и сроков их реализации", s1c: "1,5", s3c: "1,5", s9c: "-" },
-                          { name: "3.5. Контроль за реализацией корректирующих мероприятий", s1c: "2,0", s3c: "2,0", s9c: "-" },
+                          { name: "3.1. Выбор программы инспекционного контроля ***", s1c: "1,5", s3c: "-", s7c: "1,5", s9c: "-" },
+                          { name: "3.2. Проведение одной проверки, включая анализ данных о сертифицированной продукции", s1c: "1,5", s3c: "-", s7c: "1,5", s9c: "-" },
+                          { name: "3.3. Анализ состояния производства при инспекционном контроле за сертифицированной продукцией ***", s1c: "1,5", s3c: "-", s7c: "1,5", s9c: "-" },
+                          { name: "3.4. Разработка перечня корректирующих воздействий и сроков их реализации", s1c: "1,5", s3c: "-", s7c: "1,5", s9c: "-" },
+                          { name: "3.5. Контроль за реализацией корректирующих мероприятий", s1c: "2,0", s3c: "-", s7c: "2,0", s9c: "-" },
                         ].map((row, index) => (
                           <tr key={index} className="hover:bg-card/50">
                             <td className="border border-border p-3 text-foreground/80">{row.name}</td>
                             <td className="border border-border p-3 text-center text-foreground/80">{row.s1c}</td>
                             <td className="border border-border p-3 text-center text-foreground/80">{row.s3c}</td>
+                            <td className="border border-border p-3 text-center text-foreground/80">{row.s7c}</td>
                             <td className="border border-border p-3 text-center text-foreground/80">{row.s9c}</td>
                           </tr>
                         ))}
