@@ -1631,12 +1631,6 @@ const Accreditation = () => {
                   ))}
                 </div>
 
-                {/* Примечания */}
-                <div className="mb-10 p-4 bg-secondary/30 rounded-xl border border-border text-sm text-foreground/70 space-y-2">
-                  <p><strong>*</strong> Схемы сертификации даны в соответствии с Приложением №1 ДП-02.09, а также ГОСТ Р 53603-2020. Приведенный состав работ является типовым.</p>
-                  <p><strong>**</strong> Устанавливается согласно положениям Приложения Б Постановления Госстандарта России от 23.08.1999 №44.</p>
-                  <p><strong>***</strong> Проводится ОСП, если это предусмотрено схемой сертификации.</p>
-                </div>
 
                 {/* Примерная стоимость */}
                 <div className="p-6 bg-accent/10 rounded-xl border border-accent/30">
