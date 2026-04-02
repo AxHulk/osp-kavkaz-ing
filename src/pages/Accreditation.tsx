@@ -269,7 +269,7 @@ const Accreditation = () => {
                       <Users className="w-5 h-5 text-accent" />
                     </div>
                     <h4 className="font-heading font-semibold text-foreground text-sm mb-1">
-                      Эксперты по сертификации продукции
+                      Эксперты по сертификации
                     </h4>
                     <p className="text-foreground/50 text-xs">ОСП</p>
                   </div>
