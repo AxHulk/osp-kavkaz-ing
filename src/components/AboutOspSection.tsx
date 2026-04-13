@@ -119,7 +119,7 @@ const AboutOspSection = () => {
                 </div>
                 <div>
                   <p className="text-muted-foreground text-xs">Адрес</p>
-                  <p className="text-foreground font-medium text-sm">123112, г. Москва, ул. Тестовская, д. 10, оф. 509</p>
+                  <p className="text-foreground font-medium text-sm">123112, Россия, г. Москва, ул. Тестовская, д. 10, ком. 2517/1 (офис 509)</p>
                 </div>
               </div>
             </div>
