@@ -167,7 +167,7 @@ const ContactsSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">Адрес места осуществления деятельности ОСП:</p>
-                  <p className="text-foreground">123112, РОССИЯ, г. Москва, вн.тер.г. муниципальный округ Пресненский, ул. Тестовская, д.10, оф.509</p>
+                  <p className="text-foreground">123112, Россия, г. Москва, ул. Тестовская, д. 10, ком. 2517/1 (офис 509)</p>
                 </div>
               </div>
             </div>
