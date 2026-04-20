@@ -34,7 +34,7 @@ const Accreditation = () => {
     { id: "scope", name: "Область аккредитации", icon: ClipboardList },
     { id: "schemes", name: "Схема сертификации", icon: GitBranch },
     { id: "application", name: "Заявка на сертификацию", icon: ClipboardList },
-    { id: "process", name: "Порядок работы ОС", icon: Settings },
+    // { id: "process", name: "Порядок работы ОС", icon: Settings },
     { id: "rights", name: "Права и обязанности", icon: Scale },
     { id: "complaints", name: "Рассмотрение жалоб", icon: MessageSquare },
     { id: "appeals", name: "Рассмотрение апелляций", icon: AlertCircle },
@@ -923,7 +923,7 @@ const Accreditation = () => {
                 </div>
               </section>
 
-              {/* 6. Порядок работы ОС */}
+              {/* 6. Порядок работы ОС - временно скрыт
               <section id="process" className="scroll-mt-28">
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 font-heading">
                   Этапы сертификации
@@ -958,7 +958,6 @@ const Accreditation = () => {
                             </div>
                           ) : null}
                           
-                          {/* Mobile view */}
                           <div className="p-4 bg-card/30 rounded-xl border border-border md:hidden">
                             <h3 className="text-lg font-semibold text-foreground mb-1">{step.title}</h3>
                             <p className="text-foreground/70 text-sm mb-2">{step.description}</p>
@@ -970,6 +969,7 @@ const Accreditation = () => {
                   </div>
                 </div>
               </section>
+              */}
 
               {/* 7. Права и обязанности */}
               <section id="rights" className="scroll-mt-28">
