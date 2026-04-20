@@ -34,7 +34,7 @@ const Accreditation = () => {
     { id: "scope", name: "Область аккредитации", icon: ClipboardList },
     { id: "schemes", name: "Схема сертификации", icon: GitBranch },
     { id: "application", name: "Заявка на сертификацию", icon: ClipboardList },
-    { id: "process", name: "Порядок работы ОС", icon: Settings },
+    // { id: "process", name: "Порядок работы ОС", icon: Settings },
     { id: "rights", name: "Права и обязанности", icon: Scale },
     { id: "complaints", name: "Рассмотрение жалоб", icon: MessageSquare },
     { id: "appeals", name: "Рассмотрение апелляций", icon: AlertCircle },
