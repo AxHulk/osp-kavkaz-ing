@@ -912,8 +912,8 @@ const Accreditation = () => {
                       <p className="text-foreground/70 text-sm">Форма заявки на обязательную сертификацию продукции (формат .docx)</p>
                     </div>
                     <a
-                      href="/documents/Заявка_на_обяз_сертиф_продукции.docx"
-                      download
+                      href="/documents/zayavka-na-sertifikaciyu.docx"
+                      download="Заявка на сертификацию продукции.docx"
                       className="inline-flex items-center gap-2 px-5 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-colors whitespace-nowrap"
                     >
                       <FileText className="w-4 h-4" />
@@ -1198,8 +1198,8 @@ const Accreditation = () => {
                       <p className="text-foreground/70 text-sm">Образец формы подачи жалобы или обращения (формат .docx)</p>
                     </div>
                     <a
-                      href="/documents/Форма_подачи_Жалобы_обращения.docx"
-                      download
+                      href="/documents/forma-zhaloby.docx"
+                      download="Форма подачи жалобы.docx"
                       className="inline-flex items-center gap-2 px-5 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-colors whitespace-nowrap"
                     >
                       <FileText className="w-4 h-4" />
@@ -1379,8 +1379,8 @@ const Accreditation = () => {
                       <p className="text-foreground/70 text-sm">Форма подачи апелляции (формат .docx)</p>
                     </div>
                     <a
-                      href="/documents/Форма_подачи_Апелляции.docx"
-                      download
+                      href="/documents/forma-apellyacii.docx"
+                      download="Форма подачи апелляции.docx"
                       className="inline-flex items-center gap-2 px-5 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-colors whitespace-nowrap"
                     >
                       <FileText className="w-4 h-4" />
