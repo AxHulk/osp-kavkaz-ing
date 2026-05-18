@@ -13,7 +13,7 @@ const Footer = () => {
               <img src={logo} alt="КАВКАЗ-ИНЖИНИРИНГ" className="h-10 w-auto mb-4 brightness-0 invert hover:opacity-80 transition-opacity" />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Орган по сертификации пассажирских подвесных канатных дорог
+              Орган по сертификации продукции
             </p>
           </div>
 
