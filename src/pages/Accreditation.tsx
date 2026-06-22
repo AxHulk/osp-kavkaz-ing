@@ -1405,7 +1405,6 @@ const Accreditation = () => {
                       <FlaskConical className="w-8 h-8 text-accent" />
                       <div>
                         <h3 className="font-semibold text-foreground">ООО «ЦЕНТР ИСПЫТАНИЙ КАНАТНО-ТРАНСПОРТНЫХ СИСТЕМ»</h3>
-                        <span className="text-accent/70 text-sm italic">В процессе получения аттестата аккредитации</span>
                       </div>
                     </div>
                     <p className="text-foreground/70 text-sm">
