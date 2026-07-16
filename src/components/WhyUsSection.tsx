@@ -1,4 +1,4 @@
-import { Clock, Users, Layers, ShieldCheck, HeadphonesIcon, Award } from "lucide-react";
+import { Clock, Users, Layers, ShieldCheck, HeadphonesIcon, Award, ExternalLink } from "lucide-react";
 
 const advantages = [
   {
@@ -55,10 +55,19 @@ const WhyUsSection = () => {
               </div>
               <div className="bg-background/50 rounded-lg p-4">
                 <p className="text-sm text-muted-foreground mb-1">Номер записи в реестре аккредитованных лиц:</p>
-                <p className="font-heading font-bold text-foreground text-lg">RA.RU.11XX</p>
+                <p className="font-heading font-bold text-foreground text-lg">RA.RU.11НМ50 от 01.07.2026</p>
+                <a
+                  href="https://pub.fsa.gov.ru/ral/view/38812/applicant"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors mt-2 text-sm"
+                >
+                  Проверить в реестре Росаккредитации
+                  <ExternalLink className="w-4 h-4" />
+                </a>
               </div>
               <p className="text-muted-foreground text-sm mt-4">
-                Область аккредитации: сертификация пассажирских подвесных канатных дорог и фуникулёров в соответствии с Постановлением Правительства №2425 от ../../2026г.
+                Область аккредитации: сертификация пассажирских подвесных канатных дорог и фуникулёров в соответствии с Постановлением Правительства №2425 от 24.03.2026г.
               </p>
             </div>
           </div>

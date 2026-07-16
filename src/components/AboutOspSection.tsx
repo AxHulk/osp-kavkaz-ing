@@ -1,4 +1,4 @@
-import { Building2, FileText, Hash, Wallet, Mail, MapPin } from "lucide-react";
+import { Building2, FileText, Hash, Wallet, Mail, MapPin, ExternalLink } from "lucide-react";
 
 const AboutOspSection = () => {
   return (
@@ -66,8 +66,17 @@ const AboutOspSection = () => {
                   Уникальный номер записи об аккредитации
                 </h3>
                 <p className="text-foreground/80 leading-relaxed text-sm">
-                  № RA.RU…. <span className="text-muted-foreground">(полный номер присваивается Федеральной службой по аккредитации после аккредитации ООО «КАВКАЗ-ИНЖИНИРИНГ» в качестве ОСП)</span>
+                  № RA.RU.11НМ50 от 01.07.2026
                 </p>
+                <a
+                  href="https://pub.fsa.gov.ru/ral/view/38812/applicant"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors mt-2 text-sm"
+                >
+                  Проверить в реестре Росаккредитации
+                  <ExternalLink className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>
