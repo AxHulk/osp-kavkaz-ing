@@ -14,9 +14,9 @@ const About = () => {
     },
     {
       label: "Уникальный номер записи в реестре",
-      value: "RA.RU.11КД01",
+      value: "RA.RU.11НМ50 от 01.07.2026",
       icon: Award,
-      link: "https://pub.fsa.gov.ru/roa/organizations",
+      link: "https://pub.fsa.gov.ru/ral/view/38812/applicant",
       linkText: "Проверить в реестре Росаккредитации",
     },
     {
